@@ -13,6 +13,7 @@
 * [3 探针接入](skywalking/README.md)
 	* [Jar包接入](skywalking/jar.md)
 	* [War包接入](skywalking/war.md)
+	* [集成日志组件](skywalking/integration-log4j.md)
 	* [Demo详解](skywalking/demo.md)
 	* [容器化](skywalking/docker.md)
 * [4 服务监控接入](micrometer/README.md)
