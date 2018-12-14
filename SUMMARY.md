@@ -1,6 +1,7 @@
 # 目录
 
 * [0 介绍](README.md)
+   * [DMP组件及版本支持说明](DMP-version.md)
 	* [接入支持说明](Support-Lists.md)
 * [1 服务注册与发现](eureka/README.md)
 	* [引入依赖](eureka/pom.md)
