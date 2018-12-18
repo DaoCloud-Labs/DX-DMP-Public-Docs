@@ -1,6 +1,7 @@
 # 配置中心用户接入介绍
 此章节将会按照如下小节来讲解，你也可以直接挑选感兴趣的部分进行了解。
 
+* [K8S环境下的开发模式](Apollo-ConfigSerivce-In-Docker-k8s.md)
 * [通过注解方式开启](annotation.md)
 * [通过配置文件开启](bootstrap.md)
 * [本地开发模式](local-dev.md)
