@@ -1,11 +1,12 @@
 # 目录
 
 * [0 介绍](README.md)
-   * [DMP组件及版本支持说明](DMP-version.md)
+	* [DMP组件及版本支持说明](DMP-version.md)
 	* [接入支持说明](Support-Lists.md)
 * [1 服务注册与发现](eureka/README.md)
 	* [引入依赖](eureka/pom.md)
 * [2 配置中心接入](apollo/README.md)
+	* [K8S环境下的开发模式](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
 	* [通过注解方式开启](apollo/annotation.md)
 	* [通过配置文件开启](apollo/bootstrap.md)
 	* [本地开发模式](apollo/local-dev.md)
