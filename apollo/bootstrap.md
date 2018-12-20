@@ -8,7 +8,7 @@ apollo.bootstrap.enabled = true
 # 指定加载的命名空间
 apollo.bootstrap.namespaces = application,my-another-namespace
 ```
-注意:使用了配置文件开启就可以不用在启动类上添加@EnableApolloConfig注解
+注意:使用了配置文件开启就可以不用在启动类上添加@EnableApolloConfig注解
 
 demo地址 [apollodemo2](https://github.com/Accelerater/DMP-Demo/tree/master/apollo/apollo-demo%202)
 
@@ -31,7 +31,7 @@ apollop.bootstrap.eagerLoad.enabled=true
 
 demo项目地址 [apollodemo3](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo3)
 
-# 三 通过配置中心动态调整日志级别
+# 三 通过配置中心动态调整日志级别
 
 **客户端使用spring boot自带的LoggingSystem的api来动态设置日志级别**
 
