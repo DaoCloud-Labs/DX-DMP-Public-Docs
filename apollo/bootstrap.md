@@ -1,4 +1,18 @@
-# 一 使用apollo配置中心实现对日志级别的修改以及动态生效
+# 一 通过配置文件开启配置中心
+
+在Spring Boot初始bootstrap阶段注入配置，需要在applocation.properties或者application.yml开启此功能并将需要提前注入配置的Namespace的标记（相同key的配置以靠前的namespace为准）：
+
+```
+# 在bootstrap阶段注入默认application namespace的配置
+apollo.bootstrap.enabled = true
+# 指定加载的命名空间
+apollo.bootstrap.namespaces = application,my-another-namespace
+```
+注意：使用了配置文件开启就可以不用在启动类上添加@EnableApolloConfig注解
+
+demo地址 [apollodemo2](https://github.com/Accelerater/DMP-Demo/tree/master/apollo/apollo-demo%202)
+
+# 二 使用apollo配置中心实现对日志级别的修改以及动态生效
 
 **通过配置使配置中心中的日志配置生效**
 
@@ -11,15 +25,13 @@
 
 配置示例：
 ```properties
-# will inject 'application' namespace in bootstrap phase
-apollo.bootstrap.enabled=true
-# put apollo initialization before logging system initialization
-apollo.bootstrap.eagerLoad.enabled=true
+# 将aopllo初始化放在日志系统初始化之前
+apollop.bootstrap.eagerLoad.enabled=true
 ```
 
 demo项目地址 [apollodemo3](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo3)
 
-# 二 通过配置中心动态调整日志级别
+# 三 通过配置中心动态调整日志级别
 
 **客户端使用spring boot自带的LoggingSystem的api来动态设置日志级别**
 
