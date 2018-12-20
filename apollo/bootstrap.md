@@ -1,4 +1,4 @@
-## 一 使用apollo配置中心实现对日志级别的修改以及动态生效
+# 一 使用apollo配置中心实现对日志级别的修改以及动态生效
 
 **通过配置使配置中心中的日志配置生效**
 
@@ -19,9 +19,9 @@ apollo.bootstrap.eagerLoad.enabled=true
 
 demo项目地址 [apollodemo3](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo3)
 
-### 二 通过配置中心动态调整日志级别
+# 二 通过配置中心动态调整日志级别
 
-**使用spring boot自带的LoggingSystem的api来动态设置日志级别**
+**客户端使用spring boot自带的LoggingSystem的api来动态设置日志级别**
 
 代码入下：
 ```java
