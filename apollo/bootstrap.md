@@ -2,7 +2,7 @@
 
 **通过配置使配置中心中的日志配置生效**
 
-从1.2.0版本开始，如果希望把日志相关的配置（
+从1.2.0版本开始，即从DMP 1.5 版本开始，如果希望把日志相关的配置（
 如logging.level.root=info或logback-spring.xml中的参数）
 也放在Apollo管理，那么可以额外配置apollo.bootstrap.eagerLoad.enabled=true
 来使Apollo的加载顺序放到日志系统加载之前，不过这会导致Apollo的启动过程
