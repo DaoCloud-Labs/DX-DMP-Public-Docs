@@ -19,7 +19,7 @@ apollo.bootstrap.eagerLoad.enabled=true
 
 demo项目地址 [apollodemo3](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo3)
 
-# 二 通过配置中心动态调整日志级别
+# 二 通过配置中心动态调整日志级别
 
 **客户端使用spring boot自带的LoggingSystem的api来动态设置日志级别**
 
