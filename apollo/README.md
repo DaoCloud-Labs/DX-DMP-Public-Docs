@@ -8,6 +8,8 @@
 * [Demo详解](demo.md)
 * [Jar包容器化](docker.md)
 
+更多使用可以参考[官方网站](https://github.com/ctripcorp/apollo/wiki/Java%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#3213-spring-boot%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8F%E6%8E%A8%E8%8D%90)
+
 ## 介绍
 随着微服务的流行，应用和机器数量急剧增长，程序配置也愈加繁杂：各种功能的开关、参数的配置、服务器的地址等等。
 

@@ -68,7 +68,7 @@ app.id = ${在配置中心创建的AppId}
 env = dmp
 apollo.meta = http://192.168.2.96:8080 （这里是Apollo-Configservice的地址。）
 ```
-当然，你也可以在运行Jar包时传入参数覆盖配置值：
+当然，你也可以在运行Jar包时传入参数覆盖参数值：
 
 ```bash
 java -Dapp.id=dmp -Denv=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
