@@ -14,7 +14,7 @@ demo地址 [apollodemo2](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/a
 
 # 二 使用apollo配置中心实现对日志级别的修改以及动态生效
 
-**通过配置使配置中心中的v日志配置生效**
+**通过配置使配置中心中的日志配置生效**
 
 从1.2.0版本开始，即从DMP 1.5 版本开始，如果希望把日志相关的配置（
 如logging.level.root=info或logback-spring.xml中的参数）
