@@ -25,3 +25,7 @@
 	* [添加配置](micrometer/conf.md)
 * [5 网关](gateway/README.md)
 	* [基本配置](gateway/op.md)
+* 6 微服务规范
+	* 日志集成应用信息
+		* [扩展Lobgback的PatternLayout方式](spec/patternLayout.md)
+		* [通过MDC的方式](spec/MDC.md)
