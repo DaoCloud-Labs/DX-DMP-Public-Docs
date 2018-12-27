@@ -47,7 +47,7 @@ EXPOSE 8080
 ENTRYPOINT java  -XX:+PrintFlagsFinal \
  -XX:+UnlockExperimentalVMOptions \
  -XX:+UseCGroupMemoryLimitForHeap \
- $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /$DIST_NAME.jar
+ $JAVA_OPTS -jar /$DIST_NAME.jar
  
 ```
 
