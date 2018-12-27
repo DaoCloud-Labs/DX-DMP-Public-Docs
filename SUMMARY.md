@@ -29,3 +29,4 @@
 	* 日志集成应用信息
 		* [扩展Lobgback的PatternLayout方式](spec/patternLayout.md)
 		* [通过MDC的方式](spec/MDC.md)
+		* [使JVM感知Docker容器参数](spec/jvm-docker.md)
