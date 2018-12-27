@@ -10,7 +10,7 @@ apollo.bootstrap.namespaces = application,my-another-namespace
 ```
 注意:使用了配置文件开启就可以不用在启动类上添加@EnableApolloConfig注解
 
-demo地址 [apollodemo2](https://github.com/Accelerater/DMP-Demo/tree/master/apollo/apollo-demo%202)
+demo地址 [apollodemo2](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/apollo/apollo-demo%202)
 
 # 二 使用apollo配置中心实现对日志级别的修改以及动态生效
 
@@ -29,7 +29,7 @@ demo地址 [apollodemo2](https://github.com/Accelerater/DMP-Demo/tree/master/apo
 apollop.bootstrap.eagerLoad.enabled=true
 ```
 
-demo项目地址 [apollodemo3](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo3)
+demo项目地址 [apollodemo3](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/apollo/apollo-demo3)
 
 # 三 通过配置中心动态调整日志级别
 
@@ -69,4 +69,4 @@ logging.level.org.hibernate = info
 
 在apollo中修改发布之后等一会日志就能动态生效了
 
-demo项目地址 [apollodemo4](https://github.com/Accelerater/DMP-Demo/tree/add-demo3And4/apollo/apollo-demo4)
+demo项目地址 [apollodemo4](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/apollo/apollo-demo4)
