@@ -2,7 +2,7 @@
 
 本章主要介绍的是如何实现服务的注册与发现。
 
-[引入依赖](eureka/pom.md)
+[引入依赖](pom.md)
 
 更多使用可以参考[Eureka官方WIKI](https://github.com/Netflix/eureka/wiki)
 
