@@ -1,4 +1,4 @@
-# DaoCloud Microservices Platform (DMP) - https://www.daocloud.io/dmp
+# DaoCloud Microservices Platform (DMP)
 
 DaoCloud微服务治理平，是支撑企业微服务架构的一站式微服务治理与监控平台：
 
@@ -7,6 +7,10 @@ DaoCloud微服务治理平，是支撑企业微服务架构的一站式微服务
 * DMP的服务监控涵盖了应用监控（JVM和应用相关指标）和链路追踪，同时客户端SDK可以通过埋点，支持对业务指标的监控。
 
 ![DMP Architecture](dmp-architecture.png)
+
+# 官网
+
+https://www.daocloud.io/dmp
 
 # 文档站介绍
 
