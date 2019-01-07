@@ -34,7 +34,9 @@ Apdex 分值计算公式如下：
 |key|解释|
 |:---|:---|
 | url |请求地址|
+| component |所属组件|
 | status_code |请求状态|
+| peer | 端点地址 |
 | db.type |数据库类型|
 |db.instance|数据库实例|
 |db.statement|sql语句|
