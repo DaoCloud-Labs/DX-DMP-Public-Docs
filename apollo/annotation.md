@@ -12,7 +12,7 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
 <dependency>
   <groupId>com.ctrip.framework.apollo</groupId>
   <artifactId>apollo-client</artifactId>
-  <version>1.5</version>
+  <version>1.1.0-SNAPSHOT</version>
 </dependency>
 ......
  <!--从DaoCloud的Nexus拉取依赖-->
