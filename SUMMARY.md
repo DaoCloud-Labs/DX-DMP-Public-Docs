@@ -17,7 +17,7 @@
 	* [探针接入](skywalking/README.md)
 		* [Jar包接入](skywalking/jar.md)
 		* [War包接入](skywalking/war.md)
-		* [探针参数说明](skywalking /agent-settings.md)
+		* [探针参数说明](skywalking/agent-settings.md)
 	* [集成日志组件](skywalking/integration-log4j.md)
 	* [Demo详解](skywalking/demo.md)
 	* [容器化使用](skywalking/docker.md)
