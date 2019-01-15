@@ -7,6 +7,6 @@
 |Python|[Prana](https://github.com/Netflix/Prana)|[python-eureka](https://github.com/KristianOellegaard/python-eureka)|[pyapollo](https://github.com/filamoon/pyapollo)|WIP|
 |.Net|[Prana](https://github.com/Netflix/Prana)|[spring-cloud-dotnet-discovery](https://github.com/pivotal-cf/spring-cloud-dotnet-discovery)|[apollo.net](https://github.com/ctripcorp/apollo.net)|[skywalking-netcore](https://github.com/OpenSkywalking/skywalking-netcore)|
 |NodeJs|[Prana](https://github.com/Netflix/Prana)|[eureka-js-client](https://github.com/jquatier/eureka-js-client)|[node-apollo](https://github.com/Quinton/node-apollo)|[skywalking-nodejs](https://github.com/OpenSkywalking/skywalking-nodejs)|
-|PHP|[Prana](https://github.com/Netflix/Prana)|[php-eureka-client](https://github.com/PavelLoparev/php-eureka-client)|[apollo-php-client](https://github.com/multilinguals/apollo-php-client)|WIP|
+|PHP|[Prana](https://github.com/Netflix/Prana)|[php-eureka-client](https://github.com/PavelLoparev/php-eureka-client)|[apollo-php-client](https://github.com/multilinguals/apollo-php-client)|[skywalking-php-sdk](https://github.com/SkywalkingContrib/skywalking-php-sdk)|
 |Go|[Prana](https://github.com/Netflix/Prana)|[go-eureka-client](https://github.com/ArthurHlt/go-eureka-client)|[zouyx/agollo](https://github.com/zouyx/agollo),[philchia/agollo](https://github.com/philchia/agollo)|WIP|
 |Lua||||[Kong/opentracing-lua](https://github.com/Kong/opentracing-lua)|
