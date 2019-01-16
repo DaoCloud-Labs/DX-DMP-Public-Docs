@@ -9,6 +9,7 @@
 	* [K8S环境下的开发模式](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
 	* [通过注解方式开启](apollo/annotation.md)
 	* [通过配置文件开启](apollo/bootstrap.md)
+	* [灰度发布](apollo/Apollo-GrayRule.md)
 	* [本地开发模式](apollo/local-dev.md)
 	* [Demo详解](apollo/demo.md)
 	* [容器化使用](apollo/docker.md)
