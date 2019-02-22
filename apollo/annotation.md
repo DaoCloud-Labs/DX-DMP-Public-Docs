@@ -9,11 +9,11 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
 
 ```xml
 ......
-<dependency>
-  <groupId>com.ctrip.framework.apollo</groupId>
-  <artifactId>apollo-client</artifactId>
-  <version>1.1.0-SNAPSHOT</version>
-</dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.5.0</version>
+        </dependency>
 ......
  <!--从DaoCloud的Nexus拉取依赖-->
 <repositories>
@@ -40,7 +40,7 @@ repositories {
 }
 ······
 dependencies {
-    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '1.5'
+    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '1.5.0'
 }
 ······
 ```
@@ -65,11 +65,12 @@ public class AnotherAppConfig {
 
 ```bash
 app.id = ${在配置中心创建的AppId}
-env = dmp
 apollo.meta = http://192.168.2.96:8080 （这里是Apollo-Configservice的地址。）
 ```
 当然，你也可以在运行Jar包时传入参数覆盖参数值：
 
 ```bash
-java -Dapp.id=dmp -Denv=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
+java -Dapp.id=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
+或者
+APOLLO_META=http://192.168.2.96:8080 java -Dapp.id=dmp -jar your-app.jar
 ```
