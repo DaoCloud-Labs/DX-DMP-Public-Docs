@@ -3,7 +3,7 @@
 
 配置Key | 描述 | 默认值 | 例如 |
 ----------- | ---------- | --------- | --------- |
-`agent.namespace` | **默认未设置**。命名空间，可通过此参数实现隔离。具体效果则是共用同一套Es，并在索引Index前面带上前缀。命名空间隔离跨进程传播中的标头。`HEADER`名称将组合成： `HeaderName:Namespace`. | Not set | `agent.namespace=Team-A` |
+`agent.namespace` | **默认设置为空字符`""`**。命名空间，可通过此参数实现隔离。具体效果则是共用同一套Es，并在索引Index前面带上前缀。命名空间隔离跨进程传播中的标头。`HEADER`名称将组合成： `HeaderName:Namespace`. | Not set | `agent.namespace=Team-A` |
 `agent.service_name` | 在 DMP 链路追踪 UI 中展示的应用名，与 Eureka 中注册的应用名一致（在接入了 Eureka 的情况下）。 | `Your_ApplicationName` |`agent.application_code=Demo-App` |
 `agent.sample_n_per_3_secs`|**默认全部**。每3秒采样的数量。设置为负数代表全样采取。|Not set|`agent.sample_n_per_3_secs=-1`|
 `agent.authentication`|**默认未设置**。认证token，与后端application.yml中的设置保持一致。|Not set| `agent.authentication = dangrous` |
