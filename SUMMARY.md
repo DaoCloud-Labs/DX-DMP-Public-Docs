@@ -11,7 +11,6 @@
 	* [通过配置文件开启](apollo/bootstrap.md)
 	* [灰度发布](apollo/Apollo-GrayRule.md)
 	* [本地开发模式](apollo/local-dev.md)
-	* [Demo详解](apollo/demo.md)
 	* [容器化使用](apollo/docker.md)
 * 3 分布式链路追踪
 	* [基础术语](skywalking/base.md)
@@ -20,7 +19,6 @@
 		* [War包接入](skywalking/war.md)
 		* [探针参数说明](skywalking/agent-settings.md)
 	* [集成日志组件](skywalking/integration-log4j.md)
-	* [Demo详解](skywalking/demo.md)
 	* [容器化使用](skywalking/docker.md)
 * [4 服务监控接入](micrometer/README.md)
 	* [引入依赖](micrometer/pom.md)
