@@ -20,3 +20,14 @@ collector 是基于 spring-boot-actuator 与 micrometer，对实例进行实时�
 
 
 
+# 架构概览
+
+[![AAtGNR.png](https://s2.ax1x.com/2019/03/14/AAtGNR.png)](https://imgchr.com/i/AAtGNR)
+
+
+
+## 组件
+
+- collector-managaer：负责与前端交互，并将指令通过 redis 广播至 collector-server
+- collector-server：过滤指令，转发至实例，并处理采集到的数据；定时向实例下发指令收集 metrics 指标，存入 es
+- collector-client-starter：在 app 内，基于 micrometer 及 spring-boot-actuator进行数据采集
