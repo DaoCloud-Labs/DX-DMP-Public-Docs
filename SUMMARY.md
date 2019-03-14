@@ -17,8 +17,7 @@
   - [通过注解方式开启](apollo/annotation.md)
   - [通过配置文件开启](apollo/bootstrap.md)
   - [灰度发布](apollo/Apollo-GrayRule.md)
-  - [本地开发模式](apollo/local-dev.md)
-  - [容器化使用](apollo/docker.md)
+  - [Jar包容器化使用](apollo/docker.md)
 - 3 分布式链路追踪
   - [基础术语](skywalking/base.md)
   - [探针接入](skywalking/README.md)

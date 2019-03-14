@@ -23,7 +23,7 @@ mvn clean package -U -DskipTests
 
 ## Dockerfile编写
 
-```txt
+```dockerfile
 FROM openjdk:8-jre-alpine
 
 LABEL maintainer="jian.tan@daocloud.io"
