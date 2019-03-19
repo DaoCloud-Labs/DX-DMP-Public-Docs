@@ -50,6 +50,7 @@ java -javaagent:/path/to/skywalking-agent/skywalking-agent.jar -jar yourAppDemo.
 当然，你也可以在此命令中传参覆盖`config/agent.config`中的配置，比如覆盖`agent.service_name`和`collector.backend_service`。需要注意的是，如果通过这种Vm Options的方式覆盖配置的话需要加上`skywalking`前缀，如下：
 
 - 通过`-D`进行覆盖
+
 ```bash
 java -javaagent:/path/to/skywalking-agent/skywalking-agent.jar -jar -Dskywalking.collector.servers=127.0.0.2:11800 -Dskywalking.agent.service_name=Test-Demo yourAppDemo.jar
 ```
