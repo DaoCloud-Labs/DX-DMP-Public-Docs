@@ -24,15 +24,14 @@
   - [Jar 包接入](skywalking/jar.md)
   - [War 包接入](skywalking/war.md)
   - [探针参数说明](skywalking/agent-settings.md)
-  - [集成日志组件](skywalking/integration-log4j.md) \* [容器化使用](skywalking/docker.md)
+  - [集成日志组件](skywalking/integration-log4j.md) -
+  - [容器化使用](skywalking/docker.md)
 - 4 实例监控接入
   - [简介](ac-collector/README.md)
   - [快速入门](ac-collector/QuickStart.md)
   - [配置解释](ac-collector/config/README.md)
   - [FAQ](ac-collector/FAQ.md)
-- [5 网关](gateway/README.md)
-  - [基本配置](gateway/op.md)
-- 6 微服务规范
+- 5 微服务规范
   - 日志集成应用信息
     - [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
     - [通过 MDC 的方式](spec/MDC.md)
