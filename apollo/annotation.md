@@ -72,8 +72,8 @@ apollo.meta = http://192.168.2.96:8080 （这里是Apollo-MetaService的地址�
 
 ```bash
 java -Dapp.id=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
-或者
-APOLLO_META=http://192.168.2.96:8080 java -Dapp.id=dmp -jar your-app.jar
+或者通过环境变量覆盖配置：
+APOLLO_META=http://192.168.2.96:8080 APOLLO_APP_ID=dmp java -jar your-app.jar
 ```
 
 ---
