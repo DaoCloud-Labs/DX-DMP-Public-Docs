@@ -29,7 +29,7 @@ class RestTemplateExample implements CommandLineRunner {
 
 ### 使用 FeignClient
 
-`FeignClient` 是由 `Spring` 提供的一个 **声明式** 的`HTPP Client`。详细参考 [附录 1](#附录)
+`FeignClient` 是由 `Spring` 提供的一个 **声明式** 的`HTTP Client`。详细参考 [附录 1](#附录)
 
 ```java
 // 此处的 bookmark-service 在运行时会转换为真实的 IP:PORT
