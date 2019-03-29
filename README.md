@@ -1,5 +1,9 @@
 # DaoCloud Microservices Platform (DMP)
 
+***当前版本：DMP v2.0.0***
+#### 之前版本的用户接入手册：
+- [DMP 1.4](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases)
+
 DaoCloud微服务治理平台，是支撑企业微服务架构的一站式微服务治理与监控平台：
 
 * DMP全面兼容 Spring Cloud 微服务框架，提供高可靠，高性能的企业级微服务组件。
@@ -18,4 +22,4 @@ https://www.daocloud.io/dmp
 
 此系列文档包含了**应用/服务**如何进行改造之后接入DMP的常见用法。并在文档中提供了演示的源码，供开发者参考使用。
 
-***当前版本：DMP v2.0.0***
+
