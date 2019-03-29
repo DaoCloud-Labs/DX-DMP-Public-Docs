@@ -1,5 +1,9 @@
 # Jar包接入
 
+### 下载探针
+
+`http://nexus.mschina.io/nexus/content/repositories/labs/org/apache/skywalking/dmp/agent/2.0.0/agent-2.0.0.gz`
+
 ### 解压缩探针安装包
 解压后，你将获得如下的目录结构：
 
@@ -41,7 +45,7 @@ collector.backend_service=${SW_AGENT_COLLECTOR_BACKEND_SERVICES:127.0.0.1:11800}
 更多的配置可以参考👉[参数配置](agent-settings.md)
 
 ### 启动Jar包
-此步骤比较简单。只需要在你服务启动参数中加上`-javaagent:/path/to/skywalking-package/agenxt/skywalking-agent.jar`即可。其中，参数中的`skywalking-agent.jar`为你上面步骤中解压的具体路径。
+此步骤比较简单。只需要在你服务启动参数中加上`-javaagent:/path/to/skywalking-package/agenxt/skywalking-agent.jar`即可。其中，参数中的`skywalking-agent.jar`为你上面步骤中解压的具体路径，比如: `~/Desktop/skywalking-agent/skywalking-agent.jar`。
 
 ```bash
 java -javaagent:/path/to/skywalking-agent/skywalking-agent.jar -jar yourAppDemo.jar
