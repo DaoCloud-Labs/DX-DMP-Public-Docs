@@ -1,6 +1,6 @@
 # War包接入
 
-接入War包的方式和[Jar包接入](jar.md)方式大致相同，只是添加`-javaagent`参数位置不同。
+接入War包的方式和[Jar包接入](jar.md)方式大致相同，只是添加`-javaagent`参数位置不同，需要修改Tomcat中的`CATALINA_OPTS `变量。
 
 ### 修改`Tomcat中CATALINA_OPTS变量`
 - 在`Linux Tomcat 7, Tomcat 8`环境下：

@@ -50,13 +50,14 @@ dependencies {
 
 ```java
 @Configuration
-@EnableApolloConfig({"application", "my-another-namespace"})
+@EnableApolloConfig({"application", "my-another-namespace", "application.yml"})
 public class AnotherAppConfig {
 	//······
 }
 ```
 
-**需要注意的是：**`@EnableApolloConfig`注解中的`application`和`my-another-namespace`是你在配置中心中创建的Namespace(命名空间)，按照实际情况填入。
+**需要注意的是：** `@EnableApolloConfig`注解中的`application`和`my-another-namespace`是你在配置中心中创建的Namespace(命名空间)，按照实际情况填入。
+除了properties格式的namespace不需要加后缀，其他都要加后缀。比如.yml, .yaml, .xml 等。
 
 ## 3 启动传参
 从配置中心拉取配置时，你需要告诉你的服务或者`apollo-client`去哪个配置组里面拉取配置，以及拉取配置的地址是什么。
@@ -71,8 +72,8 @@ apollo.meta = http://192.168.2.96:8080 （这里是Apollo-MetaService的地址�
 
 ```bash
 java -Dapp.id=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
-或者
-APOLLO_META=http://192.168.2.96:8080 java -Dapp.id=dmp -jar your-app.jar
+或者通过环境变量覆盖配置：
+APOLLO_META=http://192.168.2.96:8080 APOLLO_APP_ID=dmp java -jar your-app.jar
 ```
 
 ---

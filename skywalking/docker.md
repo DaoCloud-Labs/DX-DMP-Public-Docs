@@ -1,6 +1,6 @@
-# 基于Docker容器接入
+# 基于Docker容器接入（最佳实践）
 
-如果你的服务采用容器部署的话，可以参考该文档。本文档讲解了如何通过编写Dockerfile构建带有Skywalking的探针。
+如果你的服务采用容器部署的话，可以参考该文档。本文档讲解了如何通过编写Dockerfile构建带有探针的应用镜像。另外，如果你需要提供一个内部通用的带有探针的基础镜像，可以参考[构建通用探针镜像](common-agent-image.md)。
 
 ## 前置条件
 - 拿到Skywalking探针的压缩包或者探针的下载地址(本文采用的方式)。
@@ -23,7 +23,7 @@ mvn clean package -U -DskipTests
 
 ## Dockerfile编写
 
-```txt
+```dockerfile
 FROM openjdk:8-jre-alpine
 
 LABEL maintainer="jian.tan@daocloud.io"
@@ -69,14 +69,15 @@ docker build -t my-query-service-image .
 ```bash
 docker run -e SW_AGENT_NAMESPACE=2 ➊ \
 -e SW_AGENT_NAME=query-service-demo ➋ \
--e SW_AGENT_COLLECTOR_BACKEND_SERVICES=127.0.0.1:12800 ➌ \
+-e SW_AGENT_COLLECTOR_BACKEND_SERVICES=127.0.0.1:11800 ➌ \
 -d my-query-service-image
 ```
 
-- ➊ 配置探针`namespace`，该值与租户Skywalking OAP收集器的`namespace`保持一致。
+- ➊ 配置探针`namespace`，该值与租户Skywalking OAP收集器的`namespace`保持一致，即租户Code。
 - ➋ 设置该服务的服务名。
 - ➌ 配置Skywalking OAP收集器的后端地址。
 
 ### 更多环境变量
 
  可以参考[探针参数配置](agent-settings.md)
+ 

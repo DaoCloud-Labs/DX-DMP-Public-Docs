@@ -8,7 +8,7 @@ spring-boot-1.5.x版本
 <dependency>
     <groupId>io.daocloud.mircoservice</groupId>
     <artifactId>collector-client-starter-1x</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
@@ -18,7 +18,7 @@ spring-boot-2.0以上版本
 <dependency>
     <groupId>io.daocloud.mircoservice</groupId>
     <artifactId>collector-client-starter-2x</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
