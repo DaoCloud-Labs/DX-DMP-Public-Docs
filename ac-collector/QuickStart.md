@@ -37,8 +37,9 @@ collector-client-starter 的 maven 仓库为
 
 ```xml
 <repository>
-    <id>labs-snapshots</id>
-    <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
+     <id>labs-releases</id>
+     <name>labs-releases</name>
+     <url>http://nexus.mschina.io/nexus/content/repositories/labs/</url>
 </repository>
 ```
 
