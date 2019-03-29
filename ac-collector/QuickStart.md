@@ -8,7 +8,7 @@ spring-boot-1.5.x版本
 <dependency>
     <groupId>io.daocloud.mircoservice</groupId>
     <artifactId>collector-client-starter-1x</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
@@ -18,7 +18,7 @@ spring-boot-2.0以上版本
 <dependency>
     <groupId>io.daocloud.mircoservice</groupId>
     <artifactId>collector-client-starter-2x</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 
@@ -37,8 +37,9 @@ collector-client-starter 的 maven 仓库为
 
 ```xml
 <repository>
-    <id>labs-snapshots</id>
-    <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
+     <id>labs-releases</id>
+     <name>labs-releases</name>
+     <url>http://nexus.mschina.io/nexus/content/repositories/labs/</url>
 </repository>
 ```
 
