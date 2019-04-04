@@ -29,7 +29,6 @@
     },
     "plugins": [
         "github-buttons@2.1.0",
-        "versions-select@^0.1.1",
         "edit-link@^2.0.2",
         "favicon@^0.0.2"
     ],
@@ -42,18 +41,6 @@
                 "fork"
             ],
             "size": "small"
-        },
-        "versions": {
-            "options": [
-                {
-                    "value": "https://daocloud-labs.github.io/DMP-Public-Docs/",
-                    "text": "v1.4"
-                },
-                {
-                    "value": "https://daocloud-labs.github.io/DMP-Public-Docs/v2.0",
-                    "text": "v2.0"
-                }
-            ]
         },
         "edit-link": {
             "base": "https://github.com/DaoCloud-Labs/DMP-Public-Docs/edit/master",
