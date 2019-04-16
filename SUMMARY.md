@@ -23,7 +23,7 @@
   - [Jar 包接入](skywalking/jar.md)
   - [War 包接入](skywalking/war.md)
   - [探针参数说明](skywalking/agent-settings.md)
-  - [集成日志组件](skywalking/integration-log4j.md) -
+  - [集成日志组件](skywalking/integration-log4j.md)
   - [容器化使用](skywalking/docker.md)
   - [自定义忽略指定Trace Path](skywalking/trace-ignore.md)
 - [4 实例监控接入](ac-collector/README.md)
