@@ -2,7 +2,9 @@
 
 #### 接入监控
 
-在实例中引入 collector-client-starter 以及 spring-boot-actuator
+在实例中引入 collector-client-starter 以及 spring-boot-actuator.
+
+此处所使用的DaoShop中`daoshop-product`服务源码在👉[Github](https://github.com/DaoCloud-Labs/daoshop-product)
 
 spring-boot-1.5.x版本
 

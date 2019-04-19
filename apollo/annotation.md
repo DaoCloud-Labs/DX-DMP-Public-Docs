@@ -1,6 +1,6 @@
 # 通过注解方式开启
 Apollo支持注解的方式来接入配置中心。这也是最为推荐的一种做法。
-此处所使用的源码在👉[Github](https://github.com/DaoCloud-Labs/DMP-Demo/blob/master/apollo/apollo-demo/README.md)
+此处所使用的DaoShop中`daoshop-admin`服务源码在👉[Github](https://github.com/DaoCloud-Labs/daoshop-admin)
 
 要使用Apollo的注解，你需要在maven或者gradle中引入相关依赖，比如：
 
@@ -9,7 +9,7 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
 
 ```xml
 ......
-        <dependency>
+ 		<dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
             <version>2.0.0</version>
@@ -17,14 +17,19 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
 ......
  <!--从DaoCloud的Nexus拉取依赖-->
 <repositories>
-  <repository>
-    <id>snapshots</id>
-    <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
-  </repository>
-  <repository>
-    <id>releases</id>
-    <url>http://nexus.mschina.io/nexus/content/repositories/labs/</url>
-  </repository>
+        <repository>
+            <id>labs-snapshots</id>
+            <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>labs-releases</id>
+            <url>
+                http://nexus.mschina.io/nexus/content/repositories/labs/
+            </url>
+        </repository>
 </repositories>
 ......
 ```
@@ -40,7 +45,7 @@ repositories {
 }
 ······
 dependencies {
-    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '1.5.0'
+    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '2.0.0'
 }
 ······
 ```

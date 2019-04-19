@@ -79,5 +79,5 @@ docker run -e SW_AGENT_NAMESPACE=2 ➊ \
 
 ### 更多环境变量
 
- 可以参考[探针参数配置](agent-settings.md)
+ 可以参考[探针参数配置](agent-settings.md), DaoShop `daoshop-product`服务中接入的[Dockerfile](https://github.com/DaoCloud-Labs/daoshop-product/blob/master/Dockerfile)、DaoShop `daoshop-order`服务中接入的[Dockerfile](https://github.com/DaoCloud-Labs/daoshop-order/blob/master/Dockerfile).
  
