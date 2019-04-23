@@ -73,7 +73,7 @@ docker run -e SW_AGENT_NAMESPACE=2 ➊ \
 -d my-query-service-image
 ```
 
-- ➊ 配置探针`namespace`，该值与租户Skywalking OAP收集器的`namespace`保持一致，即租户Code。
+- ➊ 配置探针`namespace`，该值与租户Skywalking OAP收集器的`namespace`保持一致，即租户Code。在有调用关系的多个应用中，若此值不一致将会导致调用链断链的情况。
 - ➋ 设置该服务的服务名。
 - ➌ 配置Skywalking OAP收集器的后端地址。
 
