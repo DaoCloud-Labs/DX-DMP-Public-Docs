@@ -1,9 +1,11 @@
 {
     "author": "DaoCloud NAT DMP Team",
     "language" : "zh-hans",
+    "title": "User Guide For DMP",
     "description": "This is a sample book created by DMP",
     "extension": null,
     "generator": "site",
+    "variables": {},
     "links": {
         "sharing": {
             "all": null,
@@ -24,10 +26,11 @@
             "right": 62,
             "top": 36
         },
-        "pageNumbers": false,
+        "pageNumbers": true,
         "paperSize": "a4"
     },
     "plugins": [
+        "tbfed-pagefooter",
         "github-buttons@2.1.0",
         "edit-link@^2.0.2",
         "favicon@^0.0.2"
@@ -54,8 +57,11 @@
                 "120x120": "favicon.ico",
                 "180x180": "favicon.ico"
             }
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy www.daocloud.io 2019",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
         }
-    },
-    "title": "Use Guide For DMP",
-    "variables": {}
+    }
 }
