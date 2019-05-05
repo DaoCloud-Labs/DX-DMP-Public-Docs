@@ -25,6 +25,7 @@
   - [探针参数说明](skywalking/agent-settings.md)
   - [集成日志组件](skywalking/integration-log4j.md)
   - [容器化使用](skywalking/docker.md)
+  - [构建通用探针镜像](skywalking/common-agent-image.md)
   - [自定义忽略指定Trace Path](skywalking/trace-ignore.md)
 - [4 实例监控接入](ac-collector/README.md)
   - [快速入门](ac-collector/QuickStart.md)
