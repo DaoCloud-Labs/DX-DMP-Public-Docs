@@ -1,18 +1,15 @@
 {
     "author": "DaoCloud NAT DMP Team",
     "language" : "zh-hans",
-    "title": "User Guide For DMP",
-    "description": "This is a sample book created by DMP",
+    "title": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
+    "description": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
     "extension": null,
     "generator": "site",
     "variables": {},
     "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
+        "sidebar": {
+            "DaoCloud": "https://www.daocloud.io",
+            "DMP": "https://www.daocloud.io/dmp"
         }
     },
     "output": null,
@@ -47,7 +44,7 @@
         },
         "edit-link": {
             "base": "https://github.com/DaoCloud-Labs/DMP-Public-Docs/edit/master",
-            "label": "编辑此页"
+            "label": "编辑本页"
         },
         "favicon": {
             "shortcut": "favicon.ico",

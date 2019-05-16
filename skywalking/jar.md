@@ -2,7 +2,7 @@
 
 ### 下载探针
 
-`http://nexus.mschina.io/nexus/content/repositories/labs/org/apache/skywalking/dmp/agent/2.0.0/agent-2.0.0.gz`
+`http://nexus.mschina.io/nexus/service/local/repositories/labs/content/io/daocloud/mircoservice/skywalking/agent/2.0.1/agent-2.0.1.gz`
 
 ### 解压缩探针安装包
 解压后，你将获得如下的目录结构：

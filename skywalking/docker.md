@@ -30,7 +30,7 @@ LABEL maintainer="jian.tan@daocloud.io"
 
 ENV TZ=Asia/Shanghai \
     DIST_NAME=query-service \
-    AGENT_REPO_URL="http://nexus.mschina.io/nexus/content/repositories/labs/org/apache/skywalking/dmp/agent/2.0.0/agent-2.0.0.gz" ➊
+    AGENT_REPO_URL="http://nexus.mschina.io/nexus/service/local/repositories/labs/content/io/daocloud/mircoservice/skywalking/agent/2.0.1/agent-2.0.1.gz" ➊
 
 # Install required packages
 RUN apk add --no-cache \
@@ -39,8 +39,8 @@ RUN apk add --no-cache \
 ADD $AGENT_REPO_URL / ➋
 
 RUN set -ex; \
-    tar -zxf /agent-2.0.0.gz; \ ➌
-    rm -rf agent-2.0.0.gz;
+    tar -zxf /agent-2.0.1.gz; \ ➌
+    rm -rf agent-2.0.1.gz;
 
 RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone

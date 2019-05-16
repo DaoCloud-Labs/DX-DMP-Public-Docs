@@ -11,13 +11,13 @@ DaoCloud微服务治理平台，是支撑企业微服务架构的一站式微服
 * DMP的服务管理覆盖微服务的整个生命周期，支持服务元数据管理，服务分组与搜索，服务上线与下线，服务（外部访问）路由策略，服务熔断，服务（外部访问）安全策略，服务（外部访问）流控策略。
 * DMP的服务监控涵盖了应用监控（JVM和应用相关指标）和链路追踪，同时客户端SDK可以通过埋点，支持对业务指标的监控。
 
-![DMP Architecture](dmp-architecture.png)
+![DMP Architecture](dmp-overview.png)
 
 # 官网
 
 https://www.daocloud.io/dmp
 
-![DMP](cover_small.jpg)
+![DMP](cover.jpg)
 
 # 文档站介绍
 
