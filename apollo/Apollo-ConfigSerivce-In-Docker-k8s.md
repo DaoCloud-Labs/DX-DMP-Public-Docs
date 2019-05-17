@@ -6,9 +6,9 @@
 
 ## 解决办法：
 
-1、可以参考 [通过注解方式开启](annotation.md)末尾的方式。
+方法1、可以参考 [通过注解方式开启](annotation.md)末尾的方式，直接指定Apollo-ConfigService的地址，让MetaDate Server跳过代理这一逻辑。
 
-2、让`Config Service`启动的时候将运行该服务的宿主机IP或NodeIp注册至Eureka。同时保持容器（或者k8s）暴露的端口和宿主机端口保持一致即可。
+方法2、让`Config Service`启动的时候将运行该服务的宿主机IP或NodeIp注册至Eureka。同时保持容器（或者k8s）暴露的端口和宿主机端口保持一致即可。
 
 ### 步骤:
 **以下操作基于DMP提供的编排文件为例**
