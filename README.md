@@ -2,7 +2,7 @@
 
 ***当前版本：DMP v2.0.2***
 
-#### 之前版本的用户接入手册：
+#### 用户接入手册版本列表：
 - [DMP 1.4](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases/tag/v1.4)
 - [DMP 2.0.0](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases/tag/v2.0.0)
 
