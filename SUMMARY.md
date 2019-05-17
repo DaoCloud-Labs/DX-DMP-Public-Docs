@@ -14,29 +14,26 @@
 	  - [Http API](eureka/api.md)
 - [3. 配置中心](apollo/README.md)
   - 3.1 启用 Apollo 并接入
-    - [通过注解方式开启](apollo/annotation.md)
-    - [通过配置文件开启](apollo/bootstrap.md)
-    - [Jar 包容器化使用](apollo/docker.md)
+     - [通过注解方式开启](apollo/annotation.md)
+     - [通过配置文件开启](apollo/bootstrap.md)
+     - [Jar 包容器化使用](apollo/docker.md)
   - 3.2 高级功能
-    - [灰度发布](apollo/Apollo-GrayRule.md)
-    - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
+     - [灰度发布](apollo/Apollo-GrayRule.md)
+     - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
 - [4. 分布式链路追踪](skywalking/README.md)
   - [基础术语](skywalking/base.md)
   - 4.1 接入说明
-    - [Jar 包接入](skywalking/jar.md)
-    - [War 包接入](skywalking/war.md)
-    - [Docker 镜像接入](skywalking/docker.md)
-  - 4.2 探针参数说明
-    - [探针参数说明](skywalking/agent-settings.md)
+     - [Jar 包接入](skywalking/jar.md)
+     - [War 包接入](skywalking/war.md)
+     - [Docker 镜像接入](skywalking/docker.md)
+  - [4.2 探针参数说明](skywalking/agent-settings.md)
   - 4.3 高级功能
-    - [集成日志组件](skywalking/integration-log4j.md)
-    - [构建通用探针镜像](skywalking/common-agent-image.md)
-    - [自定义忽略指定 Trace Path](skywalking/trace-ignore.md)
+     - [集成日志组件](skywalking/integration-log4j.md)
+     - [构建通用探针镜像](skywalking/common-agent-image.md)
+     - [自定义忽略指定 Trace Path](skywalking/trace-ignore.md)
 - [5. 应用监控](ac-collector/README.md)
   - [快速入门](ac-collector/QuickStart.md)
-  - [配置解释](ac-collector/config/README.md)
-  - [FAQ](ac-collector/FAQ.md)
-- 6. 工程规范
+- [6. 工程规范](spec/README.md)
   - 日志集成应用信息
   		- [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
   		- [通过 MDC 的方式](spec/MDC.md)
