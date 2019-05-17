@@ -13,10 +13,10 @@
 	  - [Eureka Client](eureka/eureka-client.md)
 	  - [Http API](eureka/api.md)
 - [3. 配置中心](apollo/README.md)
-  - 3.1 启用 Apollo Client 及接入 Apollo Server
-  - [通过注解方式开启](apollo/annotation.md)
-  - [通过配置文件开启](apollo/bootstrap.md)
-  - [Jar 包容器化使用](apollo/docker.md)
+  - 3.1 启用 Apollo 并接入
+    - [通过注解方式开启](apollo/annotation.md)
+    - [通过配置文件开启](apollo/bootstrap.md)
+    - [Jar 包容器化使用](apollo/docker.md)
   - 3.2 高级功能
     - [灰度发布](apollo/Apollo-GrayRule.md)
     - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
