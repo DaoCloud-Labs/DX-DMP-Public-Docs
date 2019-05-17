@@ -1,8 +1,8 @@
-# DMP Quick Start-接入快速开始
+# 快速接入
 
-这一节不会介绍太多概念或者任何原理。
+这一节的目的是介绍客户应用快速接入到 DMP 中，涉及到的概念或者原理请参考相关章节。
 
-该示例源码： [Github](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/quick-start)
+该示例源码： [quick-start](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/quick-start)
 
 ## 在配置中心创建配置组
 
