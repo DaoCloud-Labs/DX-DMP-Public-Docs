@@ -34,6 +34,6 @@
   - [FAQ](ac-collector/FAQ.md)
 - 6 微服务规范
   - 日志集成应用信息
-    - [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
-    - [通过 MDC 的方式](spec/MDC.md)
+     - [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
+     - [通过 MDC 的方式](spec/MDC.md)
   - [让 JVM 感知 Docker 容器参数](spec/jvm-docker.md)
