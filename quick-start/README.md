@@ -1,20 +1,20 @@
-# Quick Start-快速接入
+# 快速接入
 
 这一节的目的是介绍客户应用快速接入到 DMP 中，涉及到的概念或者原理请参考相关章节。
 
-这里会以`daoshop-admin`服务为例，将会介绍如何接入Eureka服务注册中心、配置中心、应用监控和实例监控四个功能模块。
+这里会以`daoshop-admin`服务为例，将会介绍如何接入服务注册与发现、配置中心、应用监控和分布式追踪四个功能模块。
 
-相关源码：[Github](https://github.com/DaoCloud-Labs/daoshop-admin)
+相关源码：[daoshop-admin](https://github.com/DaoCloud-Labs/daoshop-admin)
 
 ## 前提条件
-- 对Java、Spring Boot/Cloud 了解或者熟悉
-- 对Docker了解或熟悉
-- 对Kubernetes了解或熟悉
-- 假设你已经创建了一个最简单的Spring Boot/Cloud工程项目。
-- 演示使用各组件版本参考[pom.xml](https://github.com/DaoCloud-Labs/daoshop-admin/blob/master/pom.xml#L17)
+- 对Java、Spring Boot/Cloud 了解或者熟悉；
+- 对 Docker 了解或熟悉；
+- 对 Kubernetes 了解或熟悉；
+- 假设你已经创建了一个最简单的 Spring Boot/Cloud 工程项目;
+- 演示使用各组件版本参考[daoshop-admin#pom.xml](https://github.com/DaoCloud-Labs/daoshop-admin/blob/master/pom.xml#L17);
 
 ## 接入准备
-### 接入Eureka服务注册中心
+### 接入Eureka
 
 - 在maven `pom.xml`中引入Eureka Client依赖：参考[pom.xml](https://github.com/DaoCloud-Labs/daoshop-admin/blob/master/pom.xml#L37)
 
@@ -127,7 +127,7 @@ public class AdminApplication {
 
 ### 分布式追踪接入
 
-由于该功能接入是采用Java Agent探针的方式接入的，不需要对程序做调整。因此，直接包含在接下来构建镜像小节中。
+由于该功能接入是采用 Java Agent 的方式接入的，不需要对程序做修改。因此，直接包含在构建镜像小节中。
  
 ### 构建镜像
 
@@ -159,23 +159,23 @@ ENTRYPOINT java  -javaagent:/skywalking-agent/skywalking-agent.jar \
            -XX:+PrintFlagsFinal -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap $JAVA_OPTS -jar /$DIST_NAME.jar
 ```
 
-上面的`-javaagent:/skywalking-agent/skywalking-agent.jar`即为我们的服务加上分布式追踪的探针。
+上面的 `-javaagent:/skywalking-agent/skywalking-agent.jar` 即为我们的服务加上分布式追踪的探针。
 
-- maven 打包
+- Maven 打包
 
 ```bash
 mvn clean package -DskipTests
 ```
 
-- Docker Build
+- 镜像构建
 
 ```bash
 docker build -t daoshop-shop-admin:2.0.x .
 ```
 
-### 容器运行
+### 容器化运行
 
-- 运行容器需要的一些参数解释
+- 参数说明
 
 | Key | 说明 | 示例 |
 |:---|:---|:---|
@@ -185,7 +185,7 @@ docker build -t daoshop-shop-admin:2.0.x .
 | SW_AGENT_NAME |服务名称|daoshop_admin|
 | SW_AGENT_COLLECTOR_BACKEND_SERVICES | 分布式追踪后端地址 |127.0.10.3:11800 |
 
-- Docker Run运行
+- Docker 方式运行
 
 ```bash
 docker run -p 8080:8080 \
@@ -197,7 +197,7 @@ docker run -p 8080:8080 \
 -d  daoshop-shop-admin:2.0.x
 ```
 
-- Kubernetes 运行
+- Kubernetes 方式运行
 
 编排文件参考:[kubernetes.yml](https://github.com/DaoCloud-Labs/daoshop-admin/blob/master/kubernetes.yml):
 
@@ -268,7 +268,7 @@ kubectl apply -f kubernetes.yml
 ```
 
 ## 接入验证
-### 访问接口
+### 程序正常启动验证
 
 ```bash
 curl http://localhost:18083/admin/v1/image/main
@@ -284,14 +284,15 @@ curl http://localhost:18083/admin/v1/image/main
 ]
 ```
 
+注意：需要根据自身程序的特点进行验证
 
-### 此时进入DMP管理界面
+### DMP 管理界面验证
 
 - `daoshop_admin`服务上线
 
 ![eureka-online](img/eureka-online.png)
 
-- 更改配置中心的值
+- 动态修改配置
 
 更改配置中心`gjjxaqllvb.dao_shop`中`application`命名空间中key为`daoshop.main.img`的value，可以是任意字符串。比如：`https://www.daocloud.io/static/contact-photo.png`。
 
@@ -320,7 +321,7 @@ curl http://localhost:18083/admin/v1/image/main
 ![app-monitor](img/app-monitor.png)
 ![app-overview](img/app-overview.png)
 
-点击Tab中`实例列表`:
+点击 Tab 页中`实例列表`:
 
 ![instance-list](img/instance-list.png)
 
