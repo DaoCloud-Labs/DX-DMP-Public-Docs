@@ -1,16 +1,15 @@
 {
     "author": "DaoCloud NAT DMP Team",
     "language" : "zh-hans",
-    "description": "This is a sample book created by DMP",
+    "title": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
+    "description": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
     "extension": null,
     "generator": "site",
+    "variables": {},
     "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
+        "sidebar": {
+            "DaoCloud": "https://www.daocloud.io",
+            "DMP": "https://www.daocloud.io/dmp"
         }
     },
     "output": null,
@@ -24,10 +23,11 @@
             "right": 62,
             "top": 36
         },
-        "pageNumbers": false,
+        "pageNumbers": true,
         "paperSize": "a4"
     },
     "plugins": [
+        "tbfed-pagefooter",
         "github-buttons@2.1.0",
         "edit-link@^2.0.2",
         "favicon@^0.0.2"
@@ -44,7 +44,7 @@
         },
         "edit-link": {
             "base": "https://github.com/DaoCloud-Labs/DMP-Public-Docs/edit/master",
-            "label": "编辑此页"
+            "label": "编辑本页"
         },
         "favicon": {
             "shortcut": "favicon.ico",
@@ -54,8 +54,11 @@
                 "120x120": "favicon.ico",
                 "180x180": "favicon.ico"
             }
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy www.daocloud.io 2019",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
         }
-    },
-    "title": "Use Guide For DMP",
-    "variables": {}
+    }
 }

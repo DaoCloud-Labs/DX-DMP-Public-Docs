@@ -7,7 +7,7 @@
 FROM openjdk:8-jre-alpine
 
 ENV TZ=Asia/Shanghai \
-    AGENT_REPO_URL="http://nexus.mschina.io/nexus/content/repositories/labs/org/apache/skywalking/dmp/agent/2.0.0/agent-2.0.0.gz"
+    AGENT_REPO_URL="http://nexus.mschina.io/nexus/service/local/repositories/labs/content/io/daocloud/mircoservice/skywalking/agent/2.0.1/agent-2.0.1.gz"
 
 # Install required packages
 RUN apk add --no-cache \
@@ -20,8 +20,8 @@ RUN set -ex; \
 ADD $AGENT_REPO_URL /
 
 RUN set -ex; \
-    tar -zxf /agent-2.0.0.gz; \
-    rm -rf agent-2.0.0.gz;
+    tar -zxf /agent-2.0.1.gz; \
+    rm -rf agent-2.0.1.gz;
 
 ```
 

@@ -48,4 +48,4 @@ eureka:
 
 配置完成后启动应用即可
 
-详情可见demo [github](https://github.com/DaoCloud-Labs/DMP-Demo/tree/master/eureka/eureka-client-demo)
+详情可见Dao_Shop中[daoshop-user-center](https://github.com/DaoCloud-Labs/daoshop-user-center), [daoshop-product](https://github.com/DaoCloud-Labs/daoshop-product)服务demo.
