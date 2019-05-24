@@ -56,6 +56,10 @@ RUN set -ex; \
 RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone
 
+............................
+           其他操作
+...........................
+
 COPY target/"$DIST_NAME.jar" /"$DIST_NAME.jar"
 
 EXPOSE 12801
