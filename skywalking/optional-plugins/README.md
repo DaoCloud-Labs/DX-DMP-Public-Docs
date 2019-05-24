@@ -26,7 +26,7 @@
 
 这里以`Resis Client`的`Lettuce 5.x`插件为例。
 
-使用起来非常简单，一句话——“将`optional-plugins`目录下的相关插件拷贝到`plugins目录即可` :D”.
+使用起来非常简单，一句话：“将`optional-plugins`目录下的相关插件拷贝到`plugins目录即可`”😄.
 
 ### 结合Dockerfile使用
 
@@ -50,7 +50,7 @@ ADD $AGENT_REPO_URL /
 RUN set -ex; \
     tar -zxf /agent-2.0.1.gz; \ 
     rm -rf agent-2.0.1.gz; \
-    cp /skywalking-agent/optional-plugins/apm-lettuce-5.x-plugin-6.2.0-SNAPSHOT.jar /skywalking-agent/plugins/apm-lettuce-5.x-plugin-6.2.0-SNAPSHOT.jar; ➊
+    cp /skywalking-agent/optional-plugins/apm-lettuce-5.x-plugin-6.1.0-SNAPSHOT.jar /skywalking-agent/plugins/apm-lettuce-5.x-plugin-6.1.0-SNAPSHOT.jar; ➊
 
 
 RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
