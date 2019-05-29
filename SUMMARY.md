@@ -34,6 +34,7 @@
 - [5. 应用监控](ac-collector/README.md)
   - [快速入门](ac-collector/QuickStart.md)
   - [高级功能](ac-collector/AdvancedFeatures.md)
+  - [FAQ](ac-collector/FAQ.md)
 - [6. 工程规范](spec/README.md)
   - 日志集成应用信息
   		- [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
