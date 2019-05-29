@@ -6,4 +6,3 @@
 - 检查网络是否畅通。由于 collector-server 通常部署在容器中，可能存在网络不通的情况。
 
 如果是由于网络不通导致连接不上，可以采取直连的方式，参考👉[开发环境中使用直连模式](https://daocloud-labs.github.io/DMP-Public-Docs/ac-collector/AdvancedFeatures.html)
-
