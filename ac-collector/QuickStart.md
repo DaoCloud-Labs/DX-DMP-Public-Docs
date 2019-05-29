@@ -47,7 +47,6 @@ collector-client-starter 的 maven 仓库为
 ```
 
 
-
 #### 二、启动应用
 
 应用启动后约 20s，得到如下日志，即为接入成功
@@ -68,7 +67,6 @@ collector-client-starter 的 maven 仓库为
 点击实例名称进入详情页面
 
 ![Ex35zn.png](https://s2.ax1x.com/2019/05/20/Ex35zn.png)
-
 
 
 
