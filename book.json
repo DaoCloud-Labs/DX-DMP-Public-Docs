@@ -29,7 +29,6 @@
     "plugins": [
         "tbfed-pagefooter",
         "splitter",
-        "expandable-chapters-small",
         "sitemap-general",
         "-sharing", 
         "sharing-plus",

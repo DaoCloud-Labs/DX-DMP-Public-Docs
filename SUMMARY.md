@@ -38,7 +38,7 @@
   - [快速入门](ac-collector/QuickStart.md)
   - [高级功能](ac-collector/AdvancedFeatures.md)
 - [6. 工程规范](spec/README.md)
-  - 日志集成应用信息
-  		- [扩展 Logback 的 PatternLayout 方式](spec/patternLayout.md)
-  		- [通过 MDC 的方式](spec/MDC.md)
+  - [日志集成应用信息](spec/README.md)
+  		- [扩展Logback的PatternLayout方式](spec/patternLayout.md)
+  		- [通过MDC的方式](spec/MDC.md)
   - [让 JVM 感知 Docker 容器参数](spec/jvm-docker.md)
