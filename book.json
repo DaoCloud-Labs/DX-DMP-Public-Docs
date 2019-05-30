@@ -28,11 +28,43 @@
     },
     "plugins": [
         "tbfed-pagefooter",
+        "splitter",
+        "expandable-chapters-small",
+        "sitemap-general",
+        "-sharing", 
+        "sharing-plus",
         "github-buttons@2.1.0",
         "edit-link@^2.0.2",
         "favicon@^0.0.2"
     ],
     "pluginsConfig": {
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": true,
+            "linkedin": true,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper", "linkedin",
+                "pocket", "stumbleupon"
+            ]
+        },
+        "sitemap-general": {
+            "prefix": "https://daocloud-labs.github.io/DMP-Public-Docs"
+        },
         "github-buttons": {
             "repo": "DaoCloud-Labs/DMP-Public-Docs",
             "types": [
