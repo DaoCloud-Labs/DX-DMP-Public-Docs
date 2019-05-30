@@ -33,7 +33,7 @@
      - [自定义忽略指定 Trace Path](skywalking/trace-ignore.md)
      - [怎样使用可选插件？](skywalking/optional-plugins/README.md)
   - [4.4 遇到问题点击这里—FAQ](skywalking/faq/README.md)
-  	  - [为什么服务加上探针就注册不了Eureka Server?](skywalking/faq/eureka-server-error.md)
+  	 - [为什么服务加上探针就注册不了Eureka Server?](skywalking/faq/eureka-server-error.md)
 - [5. 应用监控](ac-collector/README.md)
   - [快速入门](ac-collector/QuickStart.md)
   - [高级功能](ac-collector/AdvancedFeatures.md)
