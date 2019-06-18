@@ -1,6 +1,6 @@
 # 接入说明
 
-实例监控依赖于服务发现机制，在接入实例监控前请先接入 eureka，参考👉[服务注册与发现](https://daocloud-labs.github.io/DMP-Public-Docs/eureka/register.html)
+实例监控依赖于服务发现机制，在接入实例监控前请先接入 eureka，参考👉[服务注册与发现](../eureka/README.md)
 
 #### 一、引入依赖
 
