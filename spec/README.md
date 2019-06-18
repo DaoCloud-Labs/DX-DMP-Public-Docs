@@ -7,3 +7,4 @@
 
 ## 容器
 - [让 JVM 感知 Docker 容器参数](jvm-docker.md)
+- [JVM OOM文件Dump](JVM-OOM文件储存方案.md)

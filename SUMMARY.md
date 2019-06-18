@@ -42,3 +42,4 @@
   		- [扩展Logback的PatternLayout方式](spec/patternLayout.md)
   		- [通过MDC的方式](spec/MDC.md)
   - [让 JVM 感知 Docker 容器参数](spec/jvm-docker.md)
+  - [JVM OOM文件Dump](spec/JVM-OOM文件储存方案.md)
