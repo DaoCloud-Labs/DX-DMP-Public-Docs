@@ -1,5 +1,7 @@
 # 接入说明
 
+实例监控依赖于服务发现机制，在接入实例监控前请先接入 eureka，参考👉[服务注册与发现](https://daocloud-labs.github.io/DMP-Public-Docs/eureka/register.html)
+
 #### 一、引入依赖
 
 在实例中引入 collector-client-starter 以及 spring-boot-actuator
@@ -45,14 +47,7 @@ collector-client-starter 的 maven 仓库为
 ```
 
 
-
-#### 二、注册 eureka
-
-实例需要使用 eureka 实例列表，查看监控详情。同时，默认情况下，实例将通过 eureka 服务发现，寻找 collector-server 的地址以建立 websocket 连接，需要将实例与 collector-server 注册到同一 eureka。
-
-
-
-#### 三、启动应用
+#### 二、启动应用
 
 应用启动后约 20s，得到如下日志，即为接入成功
 
@@ -63,7 +58,7 @@ collector-client-starter 的 maven 仓库为
 
 
 
-#### 四、查看实例监控详情
+#### 三、查看实例监控详情
 
 接入成功的应用，可以通过实例监控列表查看监控详情，进入实例监控，蓝色可点击的实例表示已接入实例监控
 
@@ -72,7 +67,6 @@ collector-client-starter 的 maven 仓库为
 点击实例名称进入详情页面
 
 ![Ex35zn.png](https://s2.ax1x.com/2019/05/20/Ex35zn.png)
-
 
 
 
