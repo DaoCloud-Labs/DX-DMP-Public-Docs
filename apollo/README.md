@@ -6,6 +6,7 @@
 * [通过配置文件开启](bootstrap.md)
 * [灰度发布](Apollo-GrayRule.md)
 * [Jar包容器化](docker.md)
+* [Json/xml类型的配置文件获取方法](json-and-xml-configFile.md)
 
 更多使用可以参考[官方网站](https://github.com/ctripcorp/apollo/wiki/Java%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97#3213-spring-boot%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8F%E6%8E%A8%E8%8D%90)
 

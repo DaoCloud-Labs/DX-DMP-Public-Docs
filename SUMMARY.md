@@ -18,6 +18,7 @@
      - [通过配置文件开启](apollo/bootstrap.md)
      - [Jar 包容器化使用](apollo/docker.md)
   - 3.2 高级功能
+     - [Json/xml类型的配置文件获取方法](apollo/json-and-xml-configFile.md)
      - [灰度发布](apollo/Apollo-GrayRule.md)
      - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
 - [4. 分布式链路追踪](skywalking/README.md)
