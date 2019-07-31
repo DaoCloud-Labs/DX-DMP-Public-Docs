@@ -6,6 +6,12 @@
     "extension": null,
     "generator": "site",
     "variables": {},
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
     "links": {
         "sidebar": {
             "DaoCloud": "https://www.daocloud.io",
@@ -34,7 +40,9 @@
         "sharing-plus",
         "github-buttons@2.1.0",
         "edit-link@^2.0.2",
-        "favicon@^0.0.2"
+        "favicon@^0.0.2",
+        "anchors",
+        "anchor-navigation-ex"
     ],
     "pluginsConfig": {
         "sharing": {
@@ -90,6 +98,9 @@
             "copyright":"Copyright &copy www.daocloud.io 2019",
             "modify_label": "修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
         }
     }
 }
