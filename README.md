@@ -1,10 +1,11 @@
 # DaoCloud Microservices Platform (DMP)
 
-***当前版本：DMP v2.1.0***
+***当前版本：DMP v2.1.4***
 
 #### 用户接入手册版本列表：
 - [DMP 1.4](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases/tag/v1.4)
 - [DMP 2.0.0](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases/tag/v2.0.0)
+- [DMP 2.1.0](https://github.com/DaoCloud-Labs/DMP-Public-Docs/releases/tag/v2.1.0)
 
 DaoCloud Microservices Platform，即 DaoCloud 微服务治理平台，是支撑企业微服务架构应用的一站式微服务治理与监控平台：
 
