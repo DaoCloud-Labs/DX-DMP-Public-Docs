@@ -21,6 +21,7 @@
      - [Json/xml类型的配置文件获取方法](apollo/json-and-xml-configFile.md)
      - [灰度发布](apollo/Apollo-GrayRule.md)
      - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
+     - [使用公共配置文件](apollo/Apollo-Public-Config.md)
 - [4. 分布式链路追踪](skywalking/README.md)
   - [基础术语](skywalking/base.md)
   - 4.1 接入说明
