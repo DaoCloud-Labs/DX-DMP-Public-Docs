@@ -4,6 +4,7 @@
 * [K8S环境下的开发模式](Apollo-ConfigSerivce-In-Docker-k8s.md)
 * [通过注解方式开启](annotation.md)
 * [通过配置文件开启](bootstrap.md)
+* [使用公共配置文件](Apollo-Public-Config.md)
 * [灰度发布](Apollo-GrayRule.md)
 * [Jar包容器化](docker.md)
 * [Json/xml类型的配置文件获取方法](json-and-xml-configFile.md)
