@@ -16,6 +16,8 @@
 
 ##### 下载 Jar 包
 
+//TODO 添加release jar包地址
+
 ##### 启动 Jar 包
 
 首先传入所必须的环境变量，使用 -javaagent 传入上一步骤下载的 jar 包，启动应用即可
@@ -77,7 +79,7 @@ spec:
       initContainers:
       - name: agent-sidecar
         image: registry.dx.io/daocloud-dmp/dx-vedfolnir-agent-sidecar:latest # 容器镜像，包含静态资源文件
-        command: ['sh', '-c', 'cp -r /vedfolnir /sidecar/']
+        command: ['sh', '-c', 'cp -r /vedfolnir /sidecar/'] # 拷贝 vedfolnit-jar 到 /sidecar/vedfolnir/ 目录
         volumeMounts:
         - name: agent-sidecar
           mountPath: /sidecar
@@ -98,7 +100,7 @@ spec:
           value: 'ws://dmp-vedfolnir-manager.dmp-dev:8002'
         ···
         - name: AGENT_OPTS
-          value: "-javaagent:/sidecar/vedfolnir/vedfolnir-agent.jar"
+          value: "-javaagent:/sidecar/vedfolnir/vedfolnir-agent.jar" #jar 包启动参数
         volumeMounts:
         - name: host-time
           mountPath: /etc/localtime
