@@ -40,5 +40,4 @@
 例如：
 `kubectl [-n your namespace] apply -f apllo.yml`
 
-
-
+注: 因为2.3.0之后去除了eureka。所以2.3.0之后强制用 apollo.configService = http://192.168.2.96:8080(configservice的地址)获取配置,apollo.meta弃用。

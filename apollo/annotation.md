@@ -7,47 +7,32 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
 ## 1 引入依赖
 - Maven方式，在`pom.xml`文件中添加如下依赖：
 
-```xml
-......
- 		<dependency>
+```
+        <!--import apollo-client-->
+        <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
-            <version>2.0.0</version>
+            <version>2.3.0.DMP.RELEASE</version>
         </dependency>
-......
- <!--从DaoCloud的Nexus拉取依赖-->
-<repositories>
+        
         <repository>
-            <id>labs-snapshots</id>
-            <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>maven-public</id>
+            <name>maven-public</name>
+            <url>https://nexus.daocloud.io/repository/maven-public/</url>
         </repository>
-        <repository>
-            <id>labs-releases</id>
-            <url>
-                http://nexus.mschina.io/nexus/content/repositories/labs/
-            </url>
-        </repository>
-</repositories>
-......
 ```
 
 - Gradle方式，在`build.gradle`文件中添加如下依赖：
 
-```json
-······
+```
 repositories {
     maven {
-        url "http://nexus.mschina.io/nexus/content/groups/public/"
+        url "https://nexus.daocloud.io/repository/maven-public/"
     }
 }
-······
 dependencies {
-    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '2.0.0'
+    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '2.3.0.DMP.RELEASE'
 }
-······
 ```
 
 ## 2 注解配置
@@ -71,18 +56,14 @@ public class AnotherAppConfig {
 
 ```bash
 app.id = ${在配置中心创建的AppId}
-apollo.meta = http://192.168.2.96:8080 （这里是Apollo-MetaService的地址。）
+apollo.configService = http://192.168.2.96:8080 （这里是Apollo-ConfigService的地址。）
 ```
 当然，你也可以在运行Jar包时传入参数覆盖参数值：
 
 ```bash
-java -Dapp.id=dmp -Dapollo.meta=http://192.168.2.96:8080 -jar your-app.jar
+java -Dapp.id=dmp -Dapollo.configService=http://192.168.2.96:8080 -jar your-app.jar
 或者通过环境变量覆盖配置：
-APOLLO_META=http://192.168.2.96:8080 APOLLO_APP_ID=dmp java -jar your-app.jar
+APOLLO_CONFIGSERVICE=http://192.168.2.96:8080 APOLLO_APP_ID=dmp java -jar your-app.jar
 ```
 
----
-
-注意：在云环境中，会发现Meta Server会通过Eureka发现Config Service地址，导致本地开发环境无法连接，但又需要做开发测试的话，可以通过`-Dapollo.configService=http://config-service的公网IP:port`来跳过`meta service`的服务发现。或者通过`APOLLO_CONFIGSERVICE`环境变量传值。
-
-
+注：通过DX环境启动的应用默认会带上DX_ENV_ID的环境变量。本地调试阶段请自行添加需要获取的配置组ID所属的环境Code。
