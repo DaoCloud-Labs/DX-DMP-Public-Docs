@@ -41,12 +41,12 @@ docker build -t my-query-service-image .
 ## 运行容器
 
 ```bash
-docker run -e APOLLO_META=http://192.168.2.96:8080 ➊ \
--e JAVA_OPTS="-Dapp.id=zzzGEKiRSd.test11" ➋ \
+docker run -e APOLLO_CONFIGSERVICE=http://192.168.2.96:8080 ➊ \
+-e APOLLO_APP_ID="zzzGEKiRSd.test11" ➋ \
 -d my-query-service-image
 ```
 
-- ➊ 配置中心Meta Server的地址。
+- ➊ 配置中心Config Server的地址。
 - ➋ 配置组ID
 
 更多使用请参考：
