@@ -2,7 +2,7 @@
 - [0. 介绍](README.md)
   - [DMP 组件及版本支持说明](DMP-version.md)
   - [客户应用接入支持说明](Support-Lists.md)
-- [1. 服务注册与发现](eureka/README.md)
+- [1. 服务注册与发现-TODO](eureka/README.md)
   - [1.1 服务注册](eureka/register.md) 
 	  - [Spring Boot](eureka/springboot.md)
 	  - [一般 Java 应用](eureka/jvm.md)
@@ -19,14 +19,13 @@
   - 2.2 高级功能
      - [Json/xml类型的配置文件获取方法](apollo/json-and-xml-configFile.md)
      - [灰度发布](apollo/Apollo-GrayRule.md)
-     - [K8s 环境下使用 Apollo 本地开发](apollo/Apollo-ConfigSerivce-In-Docker-k8s.md)
      - [使用公共配置文件](apollo/Apollo-Public-Config.md)
 - [3. 分布式链路追踪](skywalking/README.md)
   - [基础术语](skywalking/base.md)
   - 3.1 接入说明
      - [Jar 包接入](skywalking/jar.md)
      - [War 包接入](skywalking/war.md)
-     - [Docker 镜像接入](skywalking/docker.md)
+     - [基于容器Sidecar的方式接入](skywalking/docker-sidecar.md)
   - [3.2 探针参数说明](skywalking/agent-settings.md)
   - 3.3 高级功能
      - [集成日志组件](skywalking/integration-log4j.md)
