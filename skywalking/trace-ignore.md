@@ -62,64 +62,101 @@ trace.ignore_path=/your/path/1/**,/your/path/2/** ➊
 ➊ 中的路径配置规则支持`Ant Path`匹配风格，比如：
 `/path/*`, `/path/**`, `/path/?`。匹配的Path路径将不会被记录。
 
-## 最佳实践：Dockerfile编写
+## [基于容器Sidecar的方式接入](docker-sidecar.md)的最佳实践
 
-```dockerfile
-FROM openjdk:8-jre-alpine
+主要讲解在Kubernetes Pod initContainer 中执行Shell指令，将 `apm-trace-ignore-plugin.jar` 插件拷贝至 `plugins` 文件夹，并配置需要忽略的路径。
 
-LABEL maintainer="jian.tan@daocloud.io"
-
-ENV TZ=Asia/Shanghai \
-    DIST_NAME=query-service \
-    AGENT_REPO_URL="http://nexus.mschina.io/nexus/service/local/repositories/labs/content/io/daocloud/mircoservice/skywalking/agent/2.0.1/agent-2.0.1.gz" 
-
-# Install required packages
-RUN apk add --no-cache \
-    bash \
-    curl
-
-ADD $AGENT_REPO_URL / 
-
-RUN set -ex; \
-    tar -zxf /agent-2.0.1.gz; \ 
-    mv /skywalking-agent/optional-plugins/apm-trace-ignore-plugin-6.1.0-SNAPSHOT.jar /skywalking-agent/plugins/apm-trace-ignore-plugin-6.1.0-SNAPSHOT.jar; \ ➊
-    echo 'trace.ignore_path=${TRACE_IGNORE_PATH:/eureka/apps/**}' >> /skywalking-agent/config/apm-trace-ignore-plugin.config; \ ➋
-    rm -rf agent-2.0.1.gz;
-
-RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && echo $TZ > /etc/timezone
-
-COPY target/"$DIST_NAME.jar" /"$DIST_NAME.jar"
-
-EXPOSE 12801
-
-ENTRYPOINT java -javaagent:/skywalking-agent/skywalking-agent.jar \
-           -XX:+PrintFlagsFinal -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
-           $JAVA_OPTS -jar /$DIST_NAME.jar 
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dmp-ns1
+  name: daoshop-user-center
+  labels:
+    app: daoshop-user-center
+spec:
+  selector:
+    matchLabels:
+      app: daoshop-user-center
+  template:
+    metadata:
+      labels:
+        app: daoshop-user-center
+    spec:
+      # refs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
+      initContainers:
+        - name: dx-monitor-agent-sidecar
+          image: registry.dx.io/daocloud-dmp/dx-monitor-agent-sidecar:release-2.3.0-0b0cbd1
+          imagePullPolicy: IfNotPresent
+          command: 
+            - "sh"
+            - "-c"
+            - > 
+              mv /sidecar/skywalking/agent/optional-plugins/apm-trace-ignore-plugin-6.5.0-SNAPSHOT.jar /sidecar/skywalking/agent/plugins; ➊
+              echo 'trace.ignore_path=${TRACE_IGNORE_PATH:/api/sail/**}' >> /sidecar/skywalking/agent/config/apm-trace-ignore-plugin.config; ➋
+              cp -r /sidecar /target; 
+          volumeMounts:
+            - name: sidecar
+              mountPath: /target
+      containers:
+        - image: {{ daoshop-user-center.image }}
+          name: daoshop-user-center
+          resources:
+            requests:
+              memory: "2048Mi"
+              cpu: "500m"
+            limits:
+              memory: "2048Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 18081
+          env:
+            - name: JAVA_OPTS
+              value: "-javaagent:/sidecar/sidecar/skywalking/agent/skywalking-agent.jar" 
+            - name: AGENT_NAME 
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.labels[''dx.daocloud.io/service-name'']'
+            - name: AGENT_INSTANCE_UUID
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.name'
+            - name: AGENT_INSTANCE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.name'
+            - name: DMP_ENVIRONMENT_CODE
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.labels[''dx.daocloud.io/env-id'']'
+            - name: DX_APPLICATION_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.labels[''dx.daocloud.io/application-name'']'
+            - name: DX_APPLICATION_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: 'metadata.labels[''dx.daocloud.io/application-id'']'
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES  
+              value: dx-skywalking-oap-ng.dx-pilot.svc:11800
+          volumeMounts:
+            - name: sidecar
+              mountPath: /sidecar
+      volumes:
+        - name: sidecar  #共享agent文件夹
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: daoshop-user-center
+spec:
+  type: NodePort
+  ports:
+    - port: 18081
+  selector:
+    app: daoshop-user-center
 ```
 
-- ➊ 将trace-ignore插件拷贝至`plugins`目录下
-- ➋ 添加相关配置
-
-### 构建Docker镜像
-
-```bash
-docker build -t my-query-service-image .
-```
-
-### Docker 运行
-
-```bash
-docker run -e SW_AGENT_NAMESPACE=kfjiudjdif  \
--e SW_AGENT_NAME=query-service-demo  \
--e TRACE_IGNORE_PATH="/eureka/**" \ ➊
--e SW_AGENT_COLLECTOR_BACKEND_SERVICES=127.0.0.1:11800  \
--d my-query-service-image
-```
-
-- ➊ 通过环境变量覆盖需要忽略的path。
-
-## 更多环境变量
-
- 可以参考[探针参数配置](agent-settings.md)
- 
+- ➊ 将trace-ignore插件拷贝至`plugins`目录下。
+- ➋ 添加相关配置,这里将忽略追踪 `/api/sail/**` 为前缀的URL。
