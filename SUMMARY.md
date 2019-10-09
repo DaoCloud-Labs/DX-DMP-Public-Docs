@@ -35,7 +35,13 @@
   - [3.4 遇到问题点击这里—FAQ](skywalking/faq/README.md)
   	 - [为什么服务加上探针就注册不了Eureka Server?](skywalking/faq/eureka-server-error.md)
 - [4. 应用监控](vedfolnir/README.md)
-  - [快速入门](vedfolnir/QuickStart.md)
+  - 接入说明
+     - [Jar 包接入](vedfolnir/jar.md)
+     - [War 包接入](vedfolnir/war.md)
+     - [基于容器Sidecar的方式接入](vedfolnir/docker-sidecar.md)
+  - [探针参数说明](vedfolnir/agent-settings.md)
+  - 高级功能
+     - [构建通用探针镜像](vedfolnir/common-agent-image.md)
   - [FAQ](vedfolnir/FAQ.md)
 - [5. 工程规范](spec/README.md)
   - [日志集成应用信息](spec/README.md)
