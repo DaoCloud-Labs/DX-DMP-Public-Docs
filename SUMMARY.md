@@ -36,6 +36,7 @@
   - [探针参数说明](vedfolnir/agent-settings.md)
   - 高级功能
      - [构建通用探针镜像](vedfolnir/common-agent-image.md)
+  - [对接DX-监控告警](vedfolnir/dx-monitor.md)
   - [FAQ](vedfolnir/FAQ.md)
 - [5. 工程规范](spec/README.md)
   - [日志集成应用信息](spec/README.md)
