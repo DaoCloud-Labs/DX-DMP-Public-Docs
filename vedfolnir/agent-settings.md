@@ -7,6 +7,7 @@
 | VEDFOLNIR_SERVER_URL  |  | vedfolnir-manager url | 是  |
 | AGENT_INSTANCE_ID  |  | 实例 id  | 是  |
 | AGENT_NAME  |  | 当前实例服务名  | 是  |
+| DMP_ENVIRONMENT_CODE  |  | 当前实例所在环境 Code  | 是  |
 | VEDFOLNIR_LOG_LEVEL  | DEBUG |  探针日志级别| 否  |
 | VEDFOLNIR_LOG_PATH  | {vedfolnir-agent-path}/logs/vedfolnir-agent.log | 探针日志文件路径  | 否  |
 | VEDFOLNIR_LOG_BACKUPS  | 50 | 探针日志文件保留数量  | 否  |
