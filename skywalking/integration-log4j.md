@@ -1,5 +1,6 @@
-# TraceId与日志组件集成
-通过Skywalking提供的工具包，我们可以将Skywalking在追踪过程中生成的TraceId唯一标识集成到我们业务应用中常见的日志组件logback、log4j。其中lo4j支持1.x和2.x版本。
+# 对接日志中心 —— TraceId与日志组件集成
+
+通过 Skywalking 提供的工具包，我们可以将Skywalking在追踪过程中生成的TraceId唯一标识集成到我们业务应用中常见的日志组件logback、log4j。其中lo4j支持1.x和2.x版本。
 
 本章节参考源码在[Github](https://github.com/DaoCloud-Labs/DMP-Demo/blob/master/skywalking/dmp-skywalking-agent-examples-master/dmp-skywalking-agent-integration-log4j-demo/README.md)
 
@@ -21,13 +22,15 @@
 在pom.xml文件中添加如下依赖。
 
 ```xml
+<!-- https://mvnrepository.com/artifact/org.apache.skywalking/apm-toolkit-logback-1.x -->
 <dependency>
     <groupId>org.apache.skywalking</groupId>
     <artifactId>apm-toolkit-logback-1.x</artifactId>
-    <version>${skywalking.version}</version>
-    <!-- <version>5.0.0-beta2</version>-->
+    <version>6.6.0</version>
 </dependency>
 ```
+
+注意：工具包版本可以参考：https://mvnrepository.com/artifact/org.apache.skywalking/apm-toolkit-logback-1.x
 
 - Gradle
 在build.gradle中配置如下依赖：
@@ -35,7 +38,7 @@
 ```xml
 dependencies {
 	······
-    compile 'org.apache.skywalking:apm-toolkit-logback-1.x:6.0.0-beta'
+    compile 'org.apache.skywalking:apm-toolkit-logback-1.x:6.6.0'
 	······
 }
 ```
