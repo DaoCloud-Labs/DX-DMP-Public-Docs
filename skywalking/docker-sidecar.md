@@ -57,32 +57,6 @@ spec:
           env:
             - name: JAVA_OPTS
               value: "-javaagent:/sidecar/sidecar/skywalking/agent/skywalking-agent.jar" ➋
-            - name: AGENT_NAME  ➌
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.labels[''dx.daocloud.io/service-name'']'
-            - name: AGENT_INSTANCE_UUID
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.name'
-            - name: AGENT_INSTANCE_ID
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.name'
-            - name: DMP_ENVIRONMENT_CODE
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.labels[''dx.daocloud.io/env-id'']'
-            - name: DX_APPLICATION_NAME
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.labels[''dx.daocloud.io/application-name'']'
-            - name: DX_APPLICATION_ID
-              valueFrom:
-                fieldRef:
-                  fieldPath: 'metadata.labels[''dx.daocloud.io/application-id'']'
-            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES  ➍
-              value: dx-skywalking-oap-ng.dx-pilot.svc:11800
           volumeMounts:
             - name: sidecar
               mountPath: /sidecar
@@ -104,11 +78,11 @@ spec:
 ```
 
 - ➊ 将带有Agent的镜像中的探针拷贝到共享目录。
-- ➋ 使用`-javaagent`参数指定Skywalking探针的路径
-- ➌ ➍ 配置相关环境变量
+- ➋ 使用`-javaagent`参数指定 Skywalking 探针的路径。
+
+注意⚠️：探针所需相关环境变量均会通过DX部署的时候传入容器。
 
 ### 更多环境变量
 
-TODO：更新
  可以参考[探针参数配置](agent-settings.md), DaoShop `daoshop-product`服务中接入的[Dockerfile](https://github.com/DaoCloud-Labs/daoshop-product/blob/master/Dockerfile)、DaoShop `daoshop-order`服务中接入的[Dockerfile](https://github.com/DaoCloud-Labs/daoshop-order/blob/master/Dockerfile).
  
