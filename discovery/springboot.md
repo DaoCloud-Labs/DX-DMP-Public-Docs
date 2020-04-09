@@ -34,7 +34,7 @@ public class XXXApplication {
 ```yaml
 daocloud.discovery.debug=false
 daocloud.discovery.ready-type=ready
-daocloud.discovery.server=:http://dx-brain
+daocloud.discovery.server=http://dx-brain
 daocloud.discovery.refresh-service-interval=5000
 ```
 
