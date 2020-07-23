@@ -28,45 +28,92 @@
 
 使用起来非常简单，一句话：“将`optional-plugins`目录下的相关插件拷贝到`plugins目录即可`”😄.
 
-### 结合Dockerfile使用
+## 在初始化容器中添加 CMD 进行操作
 
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dmp-ns1
+  name: daoshop-order
+  labels:
+    app: daoshop-order
+    dx.daocloud.io/trace-agent: "true"
+    dx.daocloud.io/monitor-agent: "true"
+spec:
+  selector:
+    matchLabels:
+      app: daoshop-order
+  template:
+    metadata:
+      labels:
+        app: daoshop-order
+        dx.daocloud.io/trace-agent: "true"
+        dx.daocloud.io/monitor-agent: "true"
+    spec:
+      # refs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
+      initContainers:
+        - name: dx-monitor-agent-sidecar
+          image: registry.dx.io/dx-pilot/dx-monitor-agent-sidecar:2.4.0-3cdaa67
+          imagePullPolicy: Always
+          command: 
+            - "sh"
+            - "-c"
+            - > 
+              mv /sidecar/skywalking/agent/optional-plugins/apm-trace-ignore-plugin-6.6.0-SNAPSHOT.jar /sidecar/skywalking/agent/plugins;
+              echo 'trace.ignore_path=${TRACE_IGNORE_PATH:/api/sail/**,/metrics/**,/resource/v0.1/**}' >> /sidecar/skywalking/agent/config/apm-trace-ignore-plugin.config;
+              mv /sidecar/skywalking/agent/optional-plugins/apm-lettuce-5.x-plugin.jar /sidecar/skywalking/agent/plugins;   ➊
+              cp -r /sidecar /target;
+          volumeMounts:
+            - name: sidecar
+              mountPath: /target
+      containers:
+        - image: {{ daoshop-order.image }}
+          name: daoshop-order
+          resources:
+            requests:
+              memory: "2048Mi"
+              cpu: "500m"
+            limits:
+              memory: "2048Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+              name: web
+            - containerPort: 8888
+              name: metrics
+          env:
+            - name: JAVA_OPTS
+              value: "-javaagent:/sidecar/sidecar/skywalking/agent/skywalking-agent.jar -javaagent:/sidecar/sidecar/vedfolnir/vedfolnir-agent.jar"
+            - name: DX_APP_NAME
+              value: "test-app"
+            - name: DX_ENV_ID
+              value: "test"
+            - name: DX_DMP_TRACING_SERVER
+              value: dmp-skywalking-oap-ng.dmp-2-4-x.svc:11800
+            - name: DX_DMP_ACTUATOR_SERVER
+              value: ws://dx-fate:9056
+          volumeMounts:
+            - name: sidecar
+              mountPath: /sidecar
+      volumes:
+        - name: sidecar  #共享agent文件夹
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: daoshop-order
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      name: web
+    - port: 8888
+      name: metrics
+  selector:
+    app: daoshop-order
 
-```dockerfile
-FROM openjdk:8-jre-alpine
-
-LABEL maintainer="jian.tan@daocloud.io"
-
-ENV TZ=Asia/Shanghai \
-    DIST_NAME=query-service \
-    AGENT_REPO_URL="http://nexus.mschina.io/nexus/service/local/repositories/labs/content/io/daocloud/mircoservice/skywalking/agent/2.0.1/agent-2.0.1.gz" 
-
-# Install required packages
-RUN apk add --no-cache \
-    bash \
-    curl
-
-ADD $AGENT_REPO_URL / 
-
-RUN set -ex; \
-    tar -zxf /agent-2.0.1.gz; \ 
-    rm -rf agent-2.0.1.gz; \
-    cp /skywalking-agent/optional-plugins/apm-lettuce-5.x-plugin-6.1.0-SNAPSHOT.jar /skywalking-agent/plugins/apm-lettuce-5.x-plugin-6.1.0-SNAPSHOT.jar; ➊
-
-
-RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && echo $TZ > /etc/timezone
-
-............................
-           其他操作
-...........................
-
-COPY target/"$DIST_NAME.jar" /"$DIST_NAME.jar"
-
-EXPOSE 12801
-
-ENTRYPOINT java -javaagent:/skywalking-agent/skywalking-agent.jar \
-           -XX:+PrintFlagsFinal -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
-           $JAVA_OPTS -jar /$DIST_NAME.jar 
 ```
 
 - ➊ 将`lettuce-5.x`插件拷贝至`plugins`目录下

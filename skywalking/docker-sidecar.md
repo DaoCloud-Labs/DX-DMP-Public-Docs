@@ -1,11 +1,10 @@
 # 基于容器Sidecar的方式接入（最佳实践）
 
-如果你的服务采用容器部署的话，可以参考该文档。本文档讲解了如何通过`daoshop-user-center`的kubernetes 部署YAML文件讲解Sidecar的方式接入分布式链路追踪。本文采用DaoCloud发布的Sidecar镜像包为例。另外，如果你需要提供一个内部通用的带有探针的基础镜像，可以参考[构建通用探针镜像](common-agent-image.md)自己构建Sidecar镜像。
+如果你的服务采用容器部署的话，可以参考该文档。本文档讲解了如何通过`daoshop-user-center`的 kubernetes 部署 YAML 文件讲解 Sidecar 的方式接入分布式链路追踪。本文采用 DaoCloud 发布的 Sidecar 镜像包为例。
 
 ## 前置条件
 
-- 能够拉取/下载DaoCloud发布的链路追踪Agent Sidecar镜像。
-- 通过DX-Pilot中DCS部署。
+- 能够拉取/下载 DaoCloud 发布的链路追踪 Agent Sidecar 镜像。
 
 ## 步骤
 
@@ -36,7 +35,7 @@ spec:
       # refs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
       initContainers:
         - name: dx-monitor-agent-sidecar
-          image: registry.dx.io/daocloud-dmp/dx-monitor-agent-sidecar:release-2.3.0-0b0cbd1
+          image: registry.dx.io/dx-pilot/dx-monitor-agent-sidecar:2.4.0-3cdaa67
           imagePullPolicy: IfNotPresent
           command: ["cp", "-r", "/sidecar", "/target"] ➊
           volumeMounts:
