@@ -17,13 +17,10 @@
 - [3. 分布式链路追踪](skywalking/README.md)
   - [基础术语](skywalking/base.md)
   - 3.1 接入说明
-     - [Jar 包接入](skywalking/jar.md)
-     - [War 包接入](skywalking/war.md)
-     - [基于容器Sidecar的方式接入](skywalking/docker-sidecar.md)
+     - [使用容器 Sidecar 的方式接入](skywalking/docker-sidecar.md)
   - [3.2 探针参数说明](skywalking/agent-settings.md)
   - 3.3 高级功能
      - [集成日志组件](skywalking/integration-log4j.md)
-     - [构建通用探针镜像](skywalking/common-agent-image.md)
      - [自定义忽略指定 Trace Path](skywalking/trace-ignore.md)
      - [怎样使用可选插件？](skywalking/optional-plugins/README.md)
   - [3.4 遇到问题点击这里—FAQ](skywalking/faq/README.md)
