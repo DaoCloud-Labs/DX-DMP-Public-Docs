@@ -12,7 +12,7 @@ Apollo支持注解的方式来接入配置中心。这也是最为推荐的一�
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
-            <version>2.3.0.DMP.RELEASE</version>
+            <version>2.4.0.DMP.RELEASE</version>
         </dependency>
         
         <repository>
@@ -31,7 +31,7 @@ repositories {
     }
 }
 dependencies {
-    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '2.3.0.DMP.RELEASE'
+    compile group: 'com.ctrip.framework.apollo', name: 'apollo-client', version: '2.4.0.DMP.RELEASE'
 }
 ```
 
