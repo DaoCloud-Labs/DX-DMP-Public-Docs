@@ -26,15 +26,10 @@
   - [3.4 遇到问题点击这里—FAQ](skywalking/faq/README.md)
   	 - [为什么服务加上探针就注册不了Eureka Server?](skywalking/faq/eureka-server-error.md)
 - [4. 应用监控](vedfolnir/README.md)
-  - 接入说明
-     - [Jar 包接入](vedfolnir/jar.md)
-     - [War 包接入](vedfolnir/war.md)
+  - 4.1 接入说明
      - [基于容器Sidecar的方式接入](vedfolnir/docker-sidecar.md)
-  - [探针参数说明](vedfolnir/agent-settings.md)
-  - 高级功能
-     - [构建通用探针镜像](vedfolnir/common-agent-image.md)
-  - [对接DX-监控告警](vedfolnir/dx-monitor.md)
-  - [FAQ](vedfolnir/FAQ.md)
+  - [4.2 探针参数说明](vedfolnir/agent-settings.md)
+  - [4.3 对接DX-监控告警](vedfolnir/dx-monitor.md)
 - [5. 工程规范](spec/README.md)
   - [日志集成应用信息](spec/README.md)
   	 - [扩展Logback的PatternLayout方式](spec/log/patternLayout.md)
