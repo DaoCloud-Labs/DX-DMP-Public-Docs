@@ -23,13 +23,9 @@
 <url> <loc>https://daocloud-labs.github.io/skywalking/faq/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/faq/eureka-server-error.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/vedfolnir/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/vedfolnir/jar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/vedfolnir/war.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/vedfolnir/docker-sidecar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/vedfolnir/agent-settings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/vedfolnir/common-agent-image.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/vedfolnir/dx-monitor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/vedfolnir/FAQ.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/spec/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/spec/log/patternLayout.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/spec/log/MDC.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

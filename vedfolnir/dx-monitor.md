@@ -4,7 +4,7 @@
 
 对接告警平台，要求应用主动暴露 metrics 接口。
 
-- 首先在配置文件中，设置环境变量 `VEDFOLNIR_IS_EXPOSE_PROMETHEUS` 为 `true`，如需指定端口，可以设置 `VEDFOLNIR_PROMETHEUS_PORT`为特定端口号。
+- 首先在配置文件中，设置环境变量 `VEDFOLNIR_IS_EXPOSE_PROMETHEUS` 为 `true`(默认为 true，端口号 8888)，如需指定端口，可以设置 `VEDFOLNIR_PROMETHEUS_PORT`为特定端口号。
 
 - 部署应用时，yaml 文档中开放该端口
 
@@ -30,7 +30,7 @@ spec:
       # refs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
       initContainers:
         - name: dx-monitor-agent-sidecar
-          image: registry.dx.io/daocloud-dmp/dx-monitor-agent-sidecar:release-2.3.0-64801e0
+          image: registry.dx.io/daocloud-dmp/dx-monitor-agent-sidecar:release-2.4.0
           imagePullPolicy: IfNotPresent
           command: 
             - "sh"
@@ -61,12 +61,8 @@ spec:
             - name: JAVA_OPTS
               value: "-javaagent:/sidecar/sidecar/skywalking/agent/skywalking-agent.jar -javaagent:/sidecar/sidecar/vedfolnir/vedfolnir-agent.jar"
            ··· #此处省略多个环境变量
-            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
-              value: dx-skywalking-oap-ng.dp-test.svc:11800
-            - name: VEDFOLNIR_SERVER_URL
-              value: ws://dmp-vedfolnir-manager.dp-test.svc:8002
             - name: VEDFOLNIR_IS_EXPOSE_PROMETHEUS
-              value: "true"
+              value: "true"       #默认值为true，如果使用默认值，可省略该配置
             - name: VEDFOLNIR_PROMETHEUS_PORT
               value: "8888"       #默认值为8888，如果使用默认值，可省略该配置
           volumeMounts:
