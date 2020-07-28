@@ -15,12 +15,9 @@
 <url> <loc>https://daocloud-labs.github.io/apollo/Apollo-Public-Config.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/base.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/skywalking/jar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/skywalking/war.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/docker-sidecar.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/agent-settings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/integration-log4j.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://daocloud-labs.github.io/skywalking/common-agent-image.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/trace-ignore.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/optional-plugins/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/skywalking/faq/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

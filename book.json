@@ -1,0 +1,106 @@
+{
+    "author": "DaoCloud NAT DMP Team",
+    "language" : "zh-hans",
+    "title": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
+    "description": "DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册",
+    "extension": null,
+    "generator": "site",
+    "variables": {},
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "DaoCloud": "https://www.daocloud.io",
+            "DMP": "https://www.daocloud.io/dmp"
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": true,
+        "paperSize": "a4"
+    },
+    "plugins": [
+        "tbfed-pagefooter",
+        "splitter",
+        "sitemap-general",
+        "-sharing", 
+        "sharing-plus",
+        "github-buttons@2.1.0",
+        "edit-link@^2.0.2",
+        "favicon@^0.0.2",
+        "anchors",
+        "anchor-navigation-ex"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": true,
+            "linkedin": true,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper", "linkedin",
+                "pocket", "stumbleupon"
+            ]
+        },
+        "sitemap-general": {
+            "prefix": "https://daocloud-labs.github.io/DMP-Public-Docs"
+        },
+        "github-buttons": {
+            "repo": "DaoCloud-Labs/DMP-Public-Docs",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+        },
+        "edit-link": {
+            "base": "https://github.com/DaoCloud-Labs/DMP-Public-Docs/edit/master",
+            "label": "编辑本页"
+        },
+        "favicon": {
+            "shortcut": "favicon.ico",
+            "bookmark": "favicon.ico",
+            "appleTouch": "favicon.ico",
+            "appleTouchMore": {
+                "120x120": "favicon.ico",
+                "180x180": "favicon.ico"
+            }
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy www.daocloud.io 2019",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false
+        }
+    }
+}
