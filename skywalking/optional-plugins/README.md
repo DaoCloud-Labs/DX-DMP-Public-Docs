@@ -26,7 +26,7 @@
 
 这里以`Resis Client`的`Lettuce 5.x`插件为例。
 
-使用起来非常简单，一句话：“将`optional-plugins`目录下的相关插件拷贝到`plugins目录即可`”😄.
+使用起来非常简单：“将`optional-plugins`目录下的相关插件拷贝到`plugins目录即可`”😄.
 
 ## 在初始化容器中添加 CMD 进行操作
 
