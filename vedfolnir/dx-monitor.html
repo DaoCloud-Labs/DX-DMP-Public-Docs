@@ -1,0 +1,1047 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对接DX-监控告警 · DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="DaoCloud NAT DMP Team">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="FAQ.html" />
+    
+    
+    <link rel="prev" href="common-agent-image.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"DaoCloud-Labs/DMP-Public-Docs","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.daocloud.io" target="_blank" class="custom-link">DaoCloud</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.daocloud.io/dmp" target="_blank" class="custom-link">DMP</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0. 介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../DMP-version.html">
+            
+                <a href="../DMP-version.html">
+            
+                    
+                    DMP 组件及版本支持说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../Support-Lists.html">
+            
+                <a href="../Support-Lists.html">
+            
+                    
+                    客户应用接入支持说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../discovery/">
+            
+                <a href="../discovery/">
+            
+                    
+                    1. 服务注册与发现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../discovery/register.html">
+            
+                <a href="../discovery/register.html">
+            
+                    
+                    1.1 服务注册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../discovery/springboot.html">
+            
+                <a href="../discovery/springboot.html">
+            
+                    
+                    Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../apollo/">
+            
+                <a href="../apollo/">
+            
+                    
+                    2. 配置中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    2.1 启用 Apollo 并接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../apollo/annotation.html">
+            
+                <a href="../apollo/annotation.html">
+            
+                    
+                    通过注解方式开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../apollo/bootstrap.html">
+            
+                <a href="../apollo/bootstrap.html">
+            
+                    
+                    通过配置文件开启
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../apollo/docker.html">
+            
+                <a href="../apollo/docker.html">
+            
+                    
+                    Jar 包容器化使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    2.2 高级功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../apollo/json-and-xml-configFile.html">
+            
+                <a href="../apollo/json-and-xml-configFile.html">
+            
+                    
+                    Json/xml类型的配置文件获取方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../apollo/Apollo-GrayRule.html">
+            
+                <a href="../apollo/Apollo-GrayRule.html">
+            
+                    
+                    灰度发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../apollo/Apollo-Public-Config.html">
+            
+                <a href="../apollo/Apollo-Public-Config.html">
+            
+                    
+                    使用公共配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../skywalking/">
+            
+                <a href="../skywalking/">
+            
+                    
+                    3. 分布式链路追踪
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../skywalking/base.html">
+            
+                <a href="../skywalking/base.html">
+            
+                    
+                    基础术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    3.1 接入说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../skywalking/jar.html">
+            
+                <a href="../skywalking/jar.html">
+            
+                    
+                    Jar 包接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../skywalking/war.html">
+            
+                <a href="../skywalking/war.html">
+            
+                    
+                    War 包接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../skywalking/docker-sidecar.html">
+            
+                <a href="../skywalking/docker-sidecar.html">
+            
+                    
+                    基于容器Sidecar的方式接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../skywalking/agent-settings.html">
+            
+                <a href="../skywalking/agent-settings.html">
+            
+                    
+                    3.2 探针参数说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    3.3 高级功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../skywalking/integration-log4j.html">
+            
+                <a href="../skywalking/integration-log4j.html">
+            
+                    
+                    集成日志组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../skywalking/common-agent-image.html">
+            
+                <a href="../skywalking/common-agent-image.html">
+            
+                    
+                    构建通用探针镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../skywalking/trace-ignore.html">
+            
+                <a href="../skywalking/trace-ignore.html">
+            
+                    
+                    自定义忽略指定 Trace Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../skywalking/optional-plugins/">
+            
+                <a href="../skywalking/optional-plugins/">
+            
+                    
+                    怎样使用可选插件？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../skywalking/faq/">
+            
+                <a href="../skywalking/faq/">
+            
+                    
+                    3.4 遇到问题点击这里—FAQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../skywalking/faq/eureka-server-error.html">
+            
+                <a href="../skywalking/faq/eureka-server-error.html">
+            
+                    
+                    为什么服务加上探针就注册不了Eureka Server?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    4. 应用监控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    接入说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="jar.html">
+            
+                <a href="jar.html">
+            
+                    
+                    Jar 包接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="war.html">
+            
+                <a href="war.html">
+            
+                    
+                    War 包接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="docker-sidecar.html">
+            
+                <a href="docker-sidecar.html">
+            
+                    
+                    基于容器Sidecar的方式接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="agent-settings.html">
+            
+                <a href="agent-settings.html">
+            
+                    
+                    探针参数说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    高级功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="common-agent-image.html">
+            
+                <a href="common-agent-image.html">
+            
+                    
+                    构建通用探针镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="dx-monitor.html">
+            
+                <a href="dx-monitor.html">
+            
+                    
+                    对接DX-监控告警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    5. 工程规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../spec/">
+            
+                <a href="../spec/">
+            
+                    
+                    日志集成应用信息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../spec/log/patternLayout.html">
+            
+                <a href="../spec/log/patternLayout.html">
+            
+                    
+                    扩展Logback的PatternLayout方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../spec/log/MDC.html">
+            
+                <a href="../spec/log/MDC.html">
+            
+                    
+                    通过MDC的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../spec/jvm-docker.html">
+            
+                <a href="../spec/jvm-docker.html">
+            
+                    
+                    让 JVM 感知 Docker 容器参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../spec/JVM-OOM文件储存方案.html">
+            
+                <a href="../spec/JVM-OOM文件储存方案.html">
+            
+                    
+                    JVM OOM文件Dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >对接DX-监控告警</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;"><b></b>&#x5BF9;&#x63A5; DX-&#x76D1;&#x63A7;&#x544A;&#x8B66;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6B65;&#x9AA4;"><b></b>&#x6B65;&#x9AA4;</a></li><li><span class="title-icon "></span><a href="#&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><b></b>&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;"><a name="&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;" class="plugin-anchor" href="#&#x5BF9;&#x63A5;-dx-&#x76D1;&#x63A7;&#x544A;&#x8B66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BF9;&#x63A5; DX-&#x76D1;&#x63A7;&#x544A;&#x8B66;</h2>
+<h3 id="&#x6B65;&#x9AA4;"><a name="&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6B65;&#x9AA4;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4;</h3>
+<p>&#x5BF9;&#x63A5;&#x544A;&#x8B66;&#x5E73;&#x53F0;&#xFF0C;&#x8981;&#x6C42;&#x5E94;&#x7528;&#x4E3B;&#x52A8;&#x66B4;&#x9732; metrics &#x63A5;&#x53E3;&#x3002;</p>
+<ul>
+<li><p>&#x9996;&#x5148;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF; <code>VEDFOLNIR_IS_EXPOSE_PROMETHEUS</code> &#x4E3A; <code>true</code>&#xFF0C;&#x5982;&#x9700;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; <code>VEDFOLNIR_PROMETHEUS_PORT</code>&#x4E3A;&#x7279;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7;&#x3002;</p>
+</li>
+<li><p>&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x65F6;&#xFF0C;yaml &#x6587;&#x6863;&#x4E2D;&#x5F00;&#x653E;&#x8BE5;&#x7AEF;&#x53E3;</p>
+</li>
+</ul>
+<h3 id="&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><a name="&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x53C2;&#x8003;</h3>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dmp-ns1
+  name: daoshop-order
+  labels:
+    app: daoshop-order
+spec:
+  selector:
+    matchLabels:
+      app: daoshop-order
+  template:
+    metadata:
+      labels:
+        app: daoshop-order
+    spec:
+      # refs: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/
+      initContainers:
+        - name: dx-monitor-agent-sidecar
+          image: registry.dx.io/daocloud-dmp/dx-monitor-agent-sidecar:release-2.3.0-64801e0
+          imagePullPolicy: IfNotPresent
+          command: 
+            - &quot;sh&quot;
+            - &quot;-c&quot;
+            - &gt; 
+              mv /sidecar/skywalking/agent/optional-plugins/apm-trace-ignore-plugin-6.5.0-SNAPSHOT.jar /sidecar/skywalking/agent/plugins;
+              echo &apos;trace.ignore_path=${TRACE_IGNORE_PATH:/api/sail/**,/metrics/**}&apos; &gt;&gt; /sidecar/skywalking/agent/config/apm-trace-ignore-plugin.config;
+              cp -r /sidecar /target;
+          volumeMounts:
+            - name: sidecar
+              mountPath: /target
+      containers:
+        - image: {{ daoshop-order.image }}
+          name: daoshop-order
+          resources:
+            requests:
+              memory: &quot;2048Mi&quot;
+              cpu: &quot;500m&quot;
+            limits:
+              memory: &quot;2048Mi&quot;
+              cpu: &quot;500m&quot;
+          ports:
+            - containerPort: 8080
+              name: web
+            - containerPort: 8888 &#x278A;
+              name: metrics
+          env:
+            - name: JAVA_OPTS
+              value: &quot;-javaagent:/sidecar/sidecar/skywalking/agent/skywalking-agent.jar -javaagent:/sidecar/sidecar/vedfolnir/vedfolnir-agent.jar&quot;
+           &#xB7;&#xB7;&#xB7; #&#x6B64;&#x5904;&#x7701;&#x7565;&#x591A;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+            - name: SW_AGENT_COLLECTOR_BACKEND_SERVICES
+              value: dx-skywalking-oap-ng.dp-test.svc:11800
+            - name: VEDFOLNIR_SERVER_URL
+              value: ws://dmp-vedfolnir-manager.dp-test.svc:8002
+            - name: VEDFOLNIR_IS_EXPOSE_PROMETHEUS
+              value: &quot;true&quot;
+            - name: VEDFOLNIR_PROMETHEUS_PORT
+              value: &quot;8888&quot;       #&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;8888&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x53EF;&#x7701;&#x7565;&#x8BE5;&#x914D;&#x7F6E;
+          volumeMounts:
+            - name: sidecar
+              mountPath: /sidecar
+      volumes:
+        - name: sidecar  #&#x5171;&#x4EAB;agent&#x6587;&#x4EF6;&#x5939;
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: daoshop-order
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      name: web
+    - port: 8888 &#x278B;
+      name: metrics
+  selector:
+    app: daoshop-order
+</code></pre><p>&#x278A;&#x3001;&#x278B; &#x5728;&#x7F16;&#x6392;&#x6587;&#x4EF6;&#x4E2D;&#x66B4;&#x9732;&#x76D1;&#x63A7;&#x7AEF;&#x53E3;</p>
+<p>&#x76F8;&#x5173;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BF7;&#x53C2;&#x8003;&#x1F449;<a href="agent-settings.html">&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;</a> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.daocloud.io 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-07-28 15:33:41
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="common-agent-image.html" class="navigation navigation-prev " aria-label="Previous page: 构建通用探针镜像">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="FAQ.html" class="navigation navigation-next " aria-label="Next page: FAQ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对接DX-监控告警","level":"1.5.4","depth":2,"next":{"title":"FAQ","level":"1.5.5","depth":2,"path":"vedfolnir/FAQ.md","ref":"vedfolnir/FAQ.md","articles":[]},"previous":{"title":"构建通用探针镜像","level":"1.5.3.1","depth":3,"path":"vedfolnir/common-agent-image.md","ref":"vedfolnir/common-agent-image.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","splitter","sitemap-general","-sharing","sharing-plus","github-buttons@2.1.0","edit-link@^2.0.2","favicon@^0.0.2","anchors","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.daocloud.io 2019","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-general":{"prefix":"https://daocloud-labs.github.io/DMP-Public-Docs"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico","appleTouch":"favicon.ico","appleTouchMore":{"120x120":"favicon.ico","180x180":"favicon.ico"}},"github-buttons":{"repo":"DaoCloud-Labs/DMP-Public-Docs","types":["star","watch","fork"],"size":"small"},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"edit-link":{"label":"编辑本页","base":"https://github.com/DaoCloud-Labs/DMP-Public-Docs/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"DaoCloud NAT DMP Team","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册","language":"zh-hans","links":{"sidebar":{"DaoCloud":"https://www.daocloud.io","DMP":"https://www.daocloud.io/dmp"}},"gitbook":"*","description":"DaoCloud MicroService Platform 用户接入指南/DMP 微服务架构实践手册","extension":null},"file":{"path":"vedfolnir/dx-monitor.md","mtime":"2020-07-28T07:33:41.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-28T07:34:44.077Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
