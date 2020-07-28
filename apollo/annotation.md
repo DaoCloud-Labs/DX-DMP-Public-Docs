@@ -55,7 +55,7 @@ public class AnotherAppConfig {
 最简单的方式是在运行程序时通过Vm Options传入参数:
 
 ```bash
-app.id = ${在配置中心创建的AppId}
+app.id = ${环境code}.${在配置中心创建的AppId}
 apollo.configService = http://192.168.2.96:8080 （这里是Apollo-ConfigService的地址。）
 ```
 当然，你也可以在运行Jar包时传入参数覆盖参数值：
@@ -63,7 +63,5 @@ apollo.configService = http://192.168.2.96:8080 （这里是Apollo-ConfigService
 ```bash
 java -Dapp.id=dmp -Dapollo.configService=http://192.168.2.96:8080 -jar your-app.jar
 或者通过环境变量覆盖配置：
-APOLLO_CONFIGSERVICE=http://192.168.2.96:8080 APOLLO_APP_ID=dmp java -jar your-app.jar
+APOLLO_CONFIGSERVICE=http://192.168.2.96:8080 APOLLO_APP_ID=test240.dmp java -jar your-app.jar
 ```
-
-注：通过DX环境启动的应用默认会带上DX_ENV_ID的环境变量。本地调试阶段请自行添加需要获取的配置组ID所属的环境Code。
