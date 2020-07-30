@@ -3,6 +3,15 @@
 <url> <loc>https://daocloud-labs.github.io/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/DMP-version.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/Support-Lists.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/register.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/springboot.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/jvm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/non_jvm.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/discovey.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/spring-cloud-client.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/eureka-client.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://daocloud-labs.github.io/discovery/eureka/api.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/apollo/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/apollo/annotation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://daocloud-labs.github.io/apollo/bootstrap.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
