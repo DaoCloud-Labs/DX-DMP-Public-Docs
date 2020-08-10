@@ -27,5 +27,9 @@ jobs:
       with:
        # Github token for the repo
         github_token: $GITHUB_TOKEN
+
+    # Runs a set of commands using the runners shell
     - name: GitBook PDF
-      run: gitbook pdf . DMP用户接入手册V2-4-0.pdf
+      run: |
+        npm install gitbook-pdf -g
+        gitbook pdf . DMP用户接入手册V2-4-0.pdf
