@@ -1,7 +1,7 @@
 # 非 JVM 应用接入
 
 如果应用是 `非JVM` 的语言，我们可以采用 `Sidecar` 的方式将应用接入 `Eureka Server`。
-![](http://ww1.sinaimg.cn/large/eddc95fcgy1g0sx2c19waj20y80hoq36.jpg)
+![](http://cdn.jared-says.cn/eddc95fcgy1g0sx2c19waj20y80hoq36.jpg)
 
 ## 增加健康检查接口
 
