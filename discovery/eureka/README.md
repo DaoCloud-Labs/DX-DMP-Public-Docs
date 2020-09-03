@@ -15,8 +15,6 @@ Spring Cloud Netflix Eureka 是 Spring Cloud 提供用于服务发现和注册�
 
 在 Netfilx 中，Eureka 是一个 RESTful 风格的服务注册与发现的基础服务组件。Eureka 由两部分组成，一个是 Eureka Server，提供服务注册和发现功能，即我们上面说的服务端；另一个是 Eureka Client，它简化了客户端与服务端之间的交互。Eureka Client 会定时将自己的信息注册到 Eureka Server 中，并从 Server 中发现其他服务。Eureka Client 中内置一个负载均衡器，用来进行基本的负载均衡。
 
-![](https://ws1.sinaimg.cn/large/eddc95fcly1g0t1lm3l2cj20jg0bc0tr.jpg)
-
 ## 附录
 
 1. [Eureka 官方 WIKI](https://github.com/Netflix/eureka/wiki)
